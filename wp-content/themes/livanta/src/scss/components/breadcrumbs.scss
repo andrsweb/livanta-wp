@@ -1,0 +1,32 @@
+.back {
+	display: flex;
+	align-items: center;
+	color: $grey;
+	font-family: $ff;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	line-height: $lh;
+	transition: color ease $tr;
+
+	@media all and (min-width: $md) {
+		font-size: 16px;
+	}
+
+	svg {
+		margin-right: 8px;
+
+		path {
+			transition: fill ease $tr;
+		}
+	}
+
+	&:hover {
+		opacity: 1;
+		color: $red;
+
+		svg path {
+			fill: $red;
+		}
+	}
+}

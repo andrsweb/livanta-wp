@@ -1,0 +1,33 @@
+.data {
+	background-color: #fbfbfb;
+	padding-bottom: 30px;
+
+	@media (min-width: $lg) {
+		padding-bottom: 60px
+	}
+
+	.container {
+		max-width: 1332px;
+	}
+
+	.quality__wrapper {
+		padding: 0;
+	}
+
+	.services__dropdowns {
+		background-color: #fbfbfb;
+		transform: translateY(-115px);
+        margin-bottom: -115px;
+
+		@media (min-width: 520px) {
+			transform: none;
+            margin-bottom: 0;
+		}
+	}
+}
+
+.dropdown-heading {
+	@media all and (min-width: $lg) {
+		align-items: center;
+	}
+}

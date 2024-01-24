@@ -1,0 +1,42 @@
+a {
+	display: inline-block;
+	text-decoration: none;
+	transition: opacity ease-out $tr;
+	cursor: pointer;
+
+	&:hover {
+		opacity: $op;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+b, strong {
+	font-weight: $fw-bold
+}
+
+.paragraphs,
+.section__text {
+	p {
+		color: $gentle-black;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: $lh;
+
+		&:first-child {
+			margin-bottom: 20px;
+
+			@media all and (min-width: $md) {
+				margin-bottom: 30px;
+			}
+		}
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+		}
+	}
+}
