@@ -8,19 +8,26 @@ document.addEventListener( 'DOMContentLoaded', () => {
 } )
 
 const smoothScrollForAnchors = () => {
-	const anchors = document.querySelectorAll( '.anchor' )
-		if ( ! anchors ) return
+	const anchors = document.querySelectorAll( '.menu-item a[href*="#"]' )
 
-		for ( let anchor of anchors ) {
-			anchor.addEventListener( 'click', function ( e ) {
+	if ( ! anchors.length ) return
+
+	anchors.forEach( link => {
+		link.addEventListener( 'click', e => {
+			const
+				urlParts	= link.href.split( '#' ),
+				pageUrl		= urlParts[0],
+				anchor		= urlParts[1],
+				windowHref	= window.location.href.split( '#' )[0],
+				el			= document.querySelector( `#${ anchor }` )
+
+			if( el && pageUrl === windowHref ){
 				e.preventDefault()
-
-			const blockID = anchor.getAttribute( 'href' ).substring( 1 )
-
-			document.getElementById( blockID ).scrollIntoView( {
-				behavior: 'smooth',
-				block: 'start',
-			} )
+				el.scrollIntoView( {
+					behavior: 'smooth',
+					block: 'start'
+				} )
+			}
 		} )
-	}
+	} )
 }

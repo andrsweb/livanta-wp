@@ -13,8 +13,6 @@ const openDropdownAfterPageLoad = () => {
 
 	const dropdown = document.querySelector( hash )
 
-	console.log(dropdown)
-
 	if(
 		dropdown && dropdown.className &&
 		( dropdown.classList.contains( 'dropdown' ) || dropdown.classList.contains( 'techTab' ) )
@@ -32,8 +30,6 @@ const openDropdownsByClickingOnMenuItem = () => {
 				urlParts	= link.href.split( '#' ),
 				anchor		= urlParts[1],
 				dropdown	= document.querySelector( `#${ anchor }` )
-
-			console.log( dropdown )
 
 			if(
 				dropdown && dropdown.className &&

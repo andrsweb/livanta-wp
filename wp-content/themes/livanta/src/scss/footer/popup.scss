@@ -102,9 +102,11 @@
 
 	.leadership__popup_avatar {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
+		flex-grow: 1;
 
-		img {
+		.leadership__img {
 			width: 70px;
 			height: 70px;
 			margin-right: 12px;
@@ -114,12 +116,22 @@
 				height: 157px;
 				margin-right: 24px;
 			}
+
+			img {
+				height: 100%;
+				object-fit: cover;
+                border-radius: 50%;
+			}
 		}
 	}
 
-	// .leadership__popup_info {
-	// 	max-width: 250px;
-	// }
+	 .leadership__popup_info {
+		 width: calc(100% - 82px);
+
+		 @media all and (min-width: $md) {
+			 width: calc(100% - 181px)
+		 }
+	 }
 
 	.leadership__texts {
 		display: flex;

@@ -5,22 +5,8 @@ import { setTargetElement, getTargetElement } from './common/global'
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
-	showPopup('.popup-wrapper.leadership-popup-1', '.call-lead-1', '#leadership-popup-1')
-	showPopup('.popup-wrapper.leadership-popup-2', '.call-lead-2', '#leadership-popup-2')
-	showPopup('.popup-wrapper.leadership-popup-3', '.call-lead-3', '#leadership-popup-3')
-	showPopup('.popup-wrapper.leadership-popup-4', '.call-lead-4', '#leadership-popup-4')
-	showPopup('.popup-wrapper.leadership-popup-5', '.call-lead-5', '#leadership-popup-5')
-	showPopup('.popup-wrapper.leadership-popup-6', '.call-lead-6', '#leadership-popup-6')
-	showPopup('.popup-wrapper.leadership-popup-7', '.call-lead-7', '#leadership-popup-7')
-	showPopup('.popup-wrapper.leadership-popup-8', '.call-lead-8', '#leadership-popup-8')
-	showPopup('.popup-wrapper.leadership-popup-9', '.call-lead-9', '#leadership-popup-9')
-	showPopup('.popup-wrapper.leadership-popup-10', '.call-lead-10', '#leadership-popup-10')
-	showPopup('.popup-wrapper.leadership-popup-11', '.call-lead-11', '#leadership-popup-11')
-	showPopup('.popup-wrapper.leadership-popup-12', '.call-lead-12', '#leadership-popup-12')
-	showPopup('.popup-wrapper.leadership-popup-13', '.call-lead-13', '#leadership-popup-13')
-	showPopup('.popup-wrapper.leadership-popup-14', '.call-lead-14', '#leadership-popup-14')
-	showPopup('.popup-wrapper.leadership-popup-15', '.call-lead-15', '#leadership-popup-15')
 	showPopup('.popup-wrapper.video-wrapper', '.play__button', '#video-popup')
+	showLeadershipPopup()
 	showWorkPopup()
 } )
 
@@ -66,6 +52,51 @@ const showPopup = ( selector, btn, lock) => {
 				video.pause()
 				enableBodyScroll( getTargetElement() )
 		}
+	} )
+}
+
+const showLeadershipPopup = () => {
+	const
+		links	= document.querySelectorAll( '.leadership__link' ),
+		popups	= document.querySelectorAll( '.leadership__popup' )
+
+	if( ! links.length || ! popups.length ) return
+
+	links.forEach( link => {
+		link.addEventListener( 'click', e => {
+			e.preventDefault()
+
+			const
+				id		= link.dataset.id,
+				popup	= link.closest( 'section' ).querySelector( `.leadership__popup[data-id="${ id }"]` )
+
+			if( ! popup ) return
+
+			setTargetElement( popup )
+			popup.classList.add( 'showed' )
+			popup.classList.remove( 'closed' )
+			disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
+		} )
+	} )
+
+	popups.forEach( popup => {
+		const closeBtn = popup.querySelector( '.popup-close' )
+
+		closeBtn.addEventListener( 'click', () => {
+			popup.classList.add( 'closed' )
+			setTimeout( () => popup.classList.remove( 'showed', 'closed' ), 350 );
+			enableBodyScroll( getTargetElement() )
+		} )
+
+		popup.addEventListener( 'click', e => {
+			const target = e.target
+
+			if( target.className && target.classList.contains( 'popup-wrapper' ) ){
+				popup.classList.add( 'closed' )
+				setTimeout( () => popup.classList.remove( 'showed', 'closed' ), 350 );
+				enableBodyScroll( getTargetElement() )
+			}
+		} )
 	} )
 }
 
