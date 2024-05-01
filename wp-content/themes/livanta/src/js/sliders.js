@@ -43,8 +43,7 @@ const swiperInit = (selector, next, prev) => {
 
 const swiperInitWithBar = (selector, next, prev) => {
 	const swiper = new Swiper(selector, {
-		spaceBetween: 20,
-
+		slidesPerView: 'auto',
 		modules: [Navigation, Scrollbar],
 
 		navigation: {
@@ -59,17 +58,8 @@ const swiperInitWithBar = (selector, next, prev) => {
 		speed: 500,
 
 		breakpoints: {
-			320: {
-				slidesPerView: 1,
-			},
-
-			768: {
-				slidesPerView: 2,
-			},
-
 			992: {
-				slidesPerView: 'auto',
-				spaceBetween: 32
+				spaceBetween: 40
 			}
 		},
 	})

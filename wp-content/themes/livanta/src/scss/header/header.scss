@@ -349,10 +349,11 @@
 
 			> a {
 				font-weight: $fw-semibold;
-				pointer-events: none;
+				
 
 				&::after {
-					display: none
+					display: none;
+					pointer-events: none;
 				}
 			}
 

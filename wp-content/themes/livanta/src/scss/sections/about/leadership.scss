@@ -31,6 +31,7 @@
 		position: absolute;
 		bottom: 28px;
 		right: 20px;
+        margin-left: auto;
 
 		@media all and (min-width: $lg) {
 			position: static;
@@ -64,36 +65,43 @@
 	}
 
 	.swiper-slide {
-		width: 500px;
+		width: 280px;
+		height: 349px;
 		padding: 16px;
 		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.04);
 
+		@media all and (min-width: $md) {
+			width: 330px;
+			height: 449px;
+		}
+
 		@media all and (min-width: $lg) {
-			padding: 24px 33px 27px 24px;
+			padding: 24px 34px 29px 34px;
 		}
 	}
 
 	&__swiper {
 		&_wrapper {
 			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			min-height: 106px;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			height: 100%;
 
 			@media all and (min-width: $lg) {
-				min-height: 157px
+				
 			}
 		}
 
 		&_img {
 			width: 106px;
 			height: 106px;
-            margin-right: 12px;
+            margin-bottom: 10px;
 
-			@media all and (min-width: $lg) {
+			@media all and (min-width: $md) {
 				width: 157px;
 				height: 157px;
-                margin-right: 24px;
+                margin-bottom: 16px;
 			}
 
 			img {
@@ -107,31 +115,50 @@
 		&_info {
 			display: flex;
 			flex-direction: column;
-			width: calc(100% - 118px);
-			padding-left: 10px;
-
-            @media all and (min-width: $lg) {
-                width: calc(100% - 181px);
-            }
+			justify-content: flex-start;
+			width: 100%;
+			height: 100%;
 		}
 	}
 
-	&__name,
-	&__job {
+	&__name {
 		color: $gentle-black;
 		font-family: $ff;
 		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-semibold;
 		line-height: $lh;
+		display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-height: 85px;
+		margin-bottom: 4px;
+		text-align: center;
 
-		@media all and (min-width: $lg) {
+		@media all and (min-width: $md) {
 			font-size: 18px;
 		}
 	}
 
 	&__job {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: $fw-regular;
+		line-height: 18.8px;
+		text-align: center;
 		color: $grey;
+		display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-height: 76px;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+			line-height: 28.8px;
+			max-height: 120px;
+		}
 	}
 
 	&__link {
@@ -151,8 +178,8 @@
 
 		&_wrapper {
 			display: flex;
-            justify-content: flex-end;
-			padding-top: 20px;
+            justify-content: center;
+			padding-top: 10px;
 			margin-top: auto
 		}
 	}
