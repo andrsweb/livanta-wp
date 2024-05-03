@@ -6,12 +6,26 @@
 		max-width: $xl;
 	}
 
+	&__headings {
+		display: flex;
+		align-items: center;
+		margin-bottom: 14px;
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 43px;
+		}
+	}
+
 	.h2__wrapper {
 		max-width: 454px;
 		margin-bottom: 14px;
 
 		@media all and (min-width: $lg) {
 			margin-bottom: 24px;
+		}
+
+		h2 {
+			width: 100%;
 		}
 	}
 
@@ -62,6 +76,10 @@
 				background-color: inherit
 			}
 		}
+
+		&-wrapper {
+			padding: 5px 0;
+		}
 	}
 
 	.swiper-slide {
@@ -69,6 +87,7 @@
 		height: 349px;
 		padding: 16px;
 		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.04);
+		background-color: $white;
 
 		@media all and (min-width: $md) {
 			width: 330px;

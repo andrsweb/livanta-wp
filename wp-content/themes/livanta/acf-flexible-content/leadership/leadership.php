@@ -17,43 +17,47 @@ $people		= get_sub_field( 'people' );
 
 <section class="leadership" id="lead">
 	<div class="container">
-		<?php
-		if( $sup_title || $title ){
-			echo '<div class="h2__wrapper">';
-
-			if( $sup_title ) echo '<div class="subtitle">', esc_html( $sup_title ), '</div>';
-
-			if( $title ) echo '<h2 class="h2">', esc_html( $title ), '</h2>';
-
-			echo '</div>';
-		}
-		?>
-
-		<div class="leadership__top">
+		<div class="leadership__headings">
+			<div class="leadership__headings_left">
 			<?php
-			if( $text ) echo '<p class="section__text">', esc_html( $text ), '</p>';
+			if( $sup_title || $title ){
+				echo '<div class="h2__wrapper">';
 
+				if( $sup_title ) echo '<div class="subtitle">', esc_html( $sup_title ), '</div>';
+
+				if( $title ) echo '<h2 class="h2">', esc_html( $title ), '</h2>';
+
+				echo '</div>';
+			}
+			?>
+			<?php
+				if( $text ) echo '<p class="section__text">', esc_html( $text ), '</p>';
+			?>
+			</div>
+		<?php
+		?>
+			<?php
 			if( ! empty( $people ) && count( $people ) > 3 ){
 				?>
 				<div class="leadership__buttons">
 					<div class="swiper-button leadership_prev">
 						<svg width="24" height="16" viewBox="0 0 24 16" fill="none"
-							 xmlns="http://www.w3.org/2000/svg">
+							xmlns="http://www.w3.org/2000/svg">
 							<path d="M7.96155 15.9614L0 7.99988L7.96155 0.0383301L9.02306 1.09988L2.8731 7.24988H24V8.74988H2.8731L9.02306 14.8999L7.96155 15.9614Z"
-								  fill="#061021"/>
+								fill="#061021"/>
 						</svg>
 					</div>
 					<div class="swiper-button leadership_next">
 						<svg width="24" height="16" viewBox="0 0 24 16" fill="none"
-							 xmlns="http://www.w3.org/2000/svg">
+							xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.0385 0.0385697L24 8.00012L16.0384 15.9617L14.9769 14.9001L21.1269 8.75012L6.30454e-07 8.75012L7.61588e-07 7.25012L21.1269 7.25012L14.9769 1.10012L16.0385 0.0385697Z"
-								  fill="#061021"/>
+								fill="#061021"/>
 						</svg>
 					</div>
 				</div>
 				<?php
-			}
-			?>
+				}
+				?>
 		</div>
 
 		<?php
