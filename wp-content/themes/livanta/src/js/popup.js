@@ -30,8 +30,8 @@ const showPopup = ( selector, btn, lock) => {
 	closeButtons.forEach( closeBtn => {
 		closeBtn.addEventListener( 'click', () => {
 				popupWrapper.classList.add('closed')
-				setTimeout(() => popupWrapper.classList.remove('showed'), 350);
-				setTimeout(() => popupWrapper.classList.remove('closed'), 350);
+				setTimeout(() => popupWrapper.classList.remove('showed'), 350)
+				setTimeout(() => popupWrapper.classList.remove('closed'), 350)
 				enableBodyScroll(getTargetElement())
 		} )
 	})
@@ -47,8 +47,8 @@ const showPopup = ( selector, btn, lock) => {
 			if(!video) return
 
 			popupWrapper.classList.add('closed')
-				setTimeout(() => popupWrapper.classList.remove('showed'), 350);
-				setTimeout(() => popupWrapper.classList.remove('closed'), 350);
+				setTimeout(() => popupWrapper.classList.remove('showed'), 350)
+				setTimeout(() => popupWrapper.classList.remove('closed'), 350)
 				video.pause()
 				enableBodyScroll( getTargetElement() )
 		}
@@ -56,49 +56,47 @@ const showPopup = ( selector, btn, lock) => {
 }
 
 const showLeadershipPopup = () => {
-	const
-		links	= document.querySelectorAll( '.leadership__link' ),
-		popups	= document.querySelectorAll( '.leadership__popup' )
+    const links = document.querySelectorAll('.leadership__link')
+    const popups = document.querySelectorAll('.leadership__popup')
 
-	if( ! links.length || ! popups.length ) return
+    if (!links.length || !popups.length) return
 
-	links.forEach( link => {
-		link.addEventListener( 'click', e => {
-			e.preventDefault()
+    links.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault()
+            const id = link.classList[1].split('-')[2]
+            const popup = document.getElementById(`leadership-popup-${id}`)
 
-			const
-				id		= link.dataset.id,
-				popup	= link.closest( 'section' ).querySelector( `.leadership__popup[data-id="${ id }"]` )
+            if (!popup) return
 
-			if( ! popup ) return
+            setTargetElement(popup)
+            popup.classList.add('showed')
+            popup.classList.remove('closed')
+            disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+        })
+    })
 
-			setTargetElement( popup )
-			popup.classList.add( 'showed' )
-			popup.classList.remove( 'closed' )
-			disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
-		} )
-	} )
+    popups.forEach(popup => {
+        const closeBtn = popup.querySelector('.popup-close')
 
-	popups.forEach( popup => {
-		const closeBtn = popup.querySelector( '.popup-close' )
+        closeBtn.addEventListener('click', () => {
+            popup.classList.add('closed')
+            setTimeout(() => popup.classList.remove('showed', 'closed'), 350)
+            enableBodyScroll(getTargetElement())
+        })
 
-		closeBtn.addEventListener( 'click', () => {
-			popup.classList.add( 'closed' )
-			setTimeout( () => popup.classList.remove( 'showed', 'closed' ), 350 );
-			enableBodyScroll( getTargetElement() )
-		} )
+        popup.addEventListener('click', e => {
+            const target = e.target
 
-		popup.addEventListener( 'click', e => {
-			const target = e.target
-
-			if( target.className && target.classList.contains( 'popup-wrapper' ) ){
-				popup.classList.add( 'closed' )
-				setTimeout( () => popup.classList.remove( 'showed', 'closed' ), 350 );
-				enableBodyScroll( getTargetElement() )
-			}
-		} )
-	} )
+            if (target.className && target.classList.contains('popup-wrapper')) {
+                popup.classList.add('closed')
+                setTimeout(() => popup.classList.remove('showed', 'closed'), 350)
+                enableBodyScroll(getTargetElement())
+            }
+        })
+    })
 }
+
 
 const showWorkPopup = () => {
 	const links = document.querySelectorAll( '.work__link' )
@@ -107,8 +105,8 @@ const showWorkPopup = () => {
 
 	const onPopupClose = popupWrapper => {
 		popupWrapper.classList.add('closed')
-		setTimeout(() => popupWrapper.classList.remove('showed'), 350);
-		setTimeout(() => popupWrapper.classList.remove('closed'), 350);
+		setTimeout(() => popupWrapper.classList.remove('showed'), 350)
+		setTimeout(() => popupWrapper.classList.remove('closed'), 350)
 		enableBodyScroll(getTargetElement())
 	}
 
