@@ -56,46 +56,52 @@ const showPopup = ( selector, btn, lock) => {
 }
 
 const showLeadershipPopup = () => {
-    const links = document.querySelectorAll('.leadership__link')
-    const popups = document.querySelectorAll('.leadership__popup')
+    const sections = document.querySelectorAll('.leadership')
 
-    if (!links.length || !popups.length) return
+    if (!sections.length) return
 
-    links.forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault()
-            const id = link.classList[1].split('-')[2]
-            const popup = document.getElementById(`leadership-popup-${id}`)
+    sections.forEach(section => {
+        const links = section.querySelectorAll('.leadership__link')
+        const popups = section.querySelectorAll('.leadership__popup')
 
-            if (!popup) return
+        links.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault()
+                const id = link.classList[1].split('-')[2]
+                const popup = section.querySelector(`.leadership-popup-${id}`)
 
-            setTargetElement(popup)
-            popup.classList.add('showed')
-            popup.classList.remove('closed')
-            disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
-        })
-    })
+                if (!popup) return
 
-    popups.forEach(popup => {
-        const closeBtn = popup.querySelector('.popup-close')
-
-        closeBtn.addEventListener('click', () => {
-            popup.classList.add('closed')
-            setTimeout(() => popup.classList.remove('showed', 'closed'), 350)
-            enableBodyScroll(getTargetElement())
+                setTargetElement(popup)
+                popup.classList.add('showed')
+                popup.classList.remove('closed')
+                disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+            })
         })
 
-        popup.addEventListener('click', e => {
-            const target = e.target
+        popups.forEach(popup => {
+            const closeBtn = popup.querySelector('.popup-close')
 
-            if (target.className && target.classList.contains('popup-wrapper')) {
+            closeBtn.addEventListener('click', () => {
                 popup.classList.add('closed')
                 setTimeout(() => popup.classList.remove('showed', 'closed'), 350)
                 enableBodyScroll(getTargetElement())
-            }
+            })
+
+            popup.addEventListener('click', e => {
+                const target = e.target
+
+                if (target.className && target.classList.contains('popup-wrapper')) {
+                    popup.classList.add('closed')
+                    setTimeout(() => popup.classList.remove('showed', 'closed'), 350)
+                    enableBodyScroll(getTargetElement())
+                }
+            })
         })
     })
 }
+
+
 
 
 const showWorkPopup = () => {
