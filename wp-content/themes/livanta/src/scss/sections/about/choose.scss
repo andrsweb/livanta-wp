@@ -111,3 +111,20 @@
 	}
 }
 
+//Temporary changes
+.page-id-223 {
+	.choose {
+		.choose__heading {
+			@media all and (min-width: $lg) {
+				padding-top: 30px;
+			}
+		}
+	}
+
+	.choose__down {
+		@media all and (min-width: $lg) {
+			transform: translateY(-50px);
+		}
+	}
+}
+
