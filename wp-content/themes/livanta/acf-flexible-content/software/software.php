@@ -34,8 +34,9 @@ $tabs	= get_sub_field( 'tabs' );
 					foreach( $tabs as $key => $tab ){
 						if( ! $tab_title = $tab['title'] ?? null ) continue;
 
+						$tab_id = $tab['id_attribute'] ?? '';
 						$class = ! $key ? ' active' : '';
-						echo '<div id="soft', esc_attr( $key ), '" class="tab-button techTab', esc_attr( $class ), '" data-id="', esc_attr( $key ), '">',
+						echo '<div id="', esc_attr( $tab_id ), '" class="tab-button techTab', esc_attr( $class ), '" data-id="', esc_attr( $key ), '">',
 							esc_html( $tab_title ),
 						'</div>';
 					}

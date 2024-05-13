@@ -10,8 +10,7 @@
 if( ! $item = $args['item'] ?? null ) return;
 
 $key		= $args['key'] ?? 0;
-$id			= $args['id'] ?? 'quality';
-$id			= $id . $key;
+$id			= $item['id_attribute'] ?? '';
 $item_title	= $item['title'];
 $col_left	= $item['col_left'];
 $col_right	= $item['col_right'];

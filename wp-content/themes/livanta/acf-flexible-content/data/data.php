@@ -43,8 +43,7 @@ $dropdown	= get_sub_field( 'dropdown' );
 			foreach( $dropdown as $key => $item )
 				get_template_part( 'components/dropdown-item', 'null', [
 					'item'	=> $item,
-					'key'	=> $key,
-					'id'	=> 'data'
+					'key'	=> $key
 				] );
 
 			echo '</div>';
