@@ -1,0 +1,21 @@
+LIVANTA-------------------------------------------
+
+WordPress Dashboard URL: https://wordpress-1194238-4208634.cloudwaysapps.com/wp-admin/
+
+Username: devops@geffensolutions.com
+
+Password: SfEsaapu7r
+
+ 
+
+Database Manager: https://wordpress-1194238-4208634.cloudwaysapps.com:8082/?username=arpsknvjsw&db=arpsknvjsw
+
+ 
+
+SFTP Access
+
+IP: 45.55.136.207
+
+Username: livantaweb
+
+Password: urq-TVX_jep.fku6vfc
