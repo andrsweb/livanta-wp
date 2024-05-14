@@ -14,7 +14,7 @@ $image		= get_sub_field( 'image' );
 $dropdown	= get_sub_field( 'dropdown' );
 ?>
 
-<section class="information quality" id="info">
+<section class="information quality" id="information-technology">
 	<div class="container">
 		<div class="services-template quality__wrapper">
 			<div class="quality__inner">

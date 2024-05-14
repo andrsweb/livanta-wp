@@ -15,7 +15,7 @@ $image		= get_sub_field( 'image' );
 $dropdown	= get_sub_field( 'dropdown' );
 ?>
 
-<section class="program" id="program">
+<section class="program" id="program-integrity">
 	<div class="container">
 		<?php
 		if( $title ){
