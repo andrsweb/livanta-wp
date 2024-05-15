@@ -1,31 +1,30 @@
 document.addEventListener( 'DOMContentLoaded',  () => {
     'use strict'
 
-    toogleDropdown()
+	toggleDropdown()
 } )
 
-const toogleDropdown = () => {
-    const dropdowns = document.querySelectorAll( '.dropdown' )
+const toggleDropdown = () => {
+    const dropdowns = document.querySelectorAll('.dropdown')
 
-    if ( ! dropdowns.length ) return
+    if (!dropdowns.length) return
 
-	dropdowns.forEach( dropdown => {
-		if ( dropdown.classList.contains( 'opened' ) )
-			reCalculateDropdownHeight( dropdown )
-	} )
+    dropdowns.forEach(dropdown => {
+        const dropdownTitle = dropdown.querySelector('.dropdown-title')
 
-    dropdowns.forEach( dropdown => {
-        dropdown.addEventListener( 'click', () => {
-            const dropdownOpen = dropdown.querySelector( '.dropdown-open' )
+        if (dropdown.classList.contains('opened'))
+            reCalculateDropdownHeight(dropdown)
 
-            if ( ! dropdownOpen ) return
+        dropdownTitle.addEventListener('click', () => {
+            const dropdownOpen = dropdown.querySelector('.dropdown-open')
 
-            if ( ! dropdown.classList.contains( 'opened' ) ) {
-                dropdown.classList.add( 'opened' )
-                reCalculateDropdownHeight( dropdown )
-            }
-            else {
-                dropdown.classList.remove( 'opened' )
+            if (!dropdownOpen) return
+
+            if (!dropdown.classList.contains('opened')) {
+                dropdown.classList.add('opened')
+                reCalculateDropdownHeight(dropdown)
+            } else {
+                dropdown.classList.remove('opened')
                 dropdownOpen.style.height = '0'
             }
         })
@@ -33,18 +32,18 @@ const toogleDropdown = () => {
 }
 
 window.addEventListener('resize', () => {
-    const dropdowns = document.querySelectorAll( '.dropdown.opened' )
+    const dropdowns = document.querySelectorAll('.dropdown.opened')
 
-    if( ! dropdowns.length ) return
+    if (!dropdowns.length) return
 
     dropdowns.forEach(dropdown => reCalculateDropdownHeight(dropdown))
 })
 
 export const reCalculateDropdownHeight = dropdown => {
-    const dropdownOpen  = dropdown.querySelector( '.dropdown-open' ),
-        dropdownInner   = dropdown.querySelector( '.dropdown-inner' )
+    const dropdownOpen = dropdown.querySelector('.dropdown-open'),
+        dropdownInner = dropdown.querySelector('.dropdown-inner')
 
-    if (! dropdownOpen || ! dropdownInner) return
+    if (!dropdownOpen || !dropdownInner) return
 
-    dropdownOpen.style.height = `${ dropdownInner.getBoundingClientRect().height }px`
+    dropdownOpen.style.height = `${dropdownInner.getBoundingClientRect().height}px`
 }
