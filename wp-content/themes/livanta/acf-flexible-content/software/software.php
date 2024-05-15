@@ -16,14 +16,6 @@ $tabs	= get_sub_field( 'tabs' );
 <section class="software" id="software-platforms">
 	<div class="container">
 		<div class="software__wrapper">
-			<div class="forAnchor" id="innovation-cloud" data-id="0"></div>
-			<div class="forAnchor" id="teasa" data-id="1"></div>
-			<div class="forAnchor" id="data-analytics" data-id="2"></div>
-			<div class="forAnchor" id="compassWeb" data-id="3"></div>
-			<div class="forAnchor" id="robotic-process" data-id="4"></div>
-			<div class="forAnchor" id="trustfolio" data-id="5"></div>
-			<div class="forAnchor" id="case-management" data-id="6"></div>
-
 			<div class="software__bar">
 				<?php
 				if( $title ) echo '<h2 class="h2">', esc_html( $title ), '</h2>';
