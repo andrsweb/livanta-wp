@@ -1,5 +1,11 @@
 node_modules
+
 .idea
-static
 /media
 /.osp
+
+/wp-admin
+/wp-includes
+/wp-content/plugins
+
+/wp-content/themes/livanta/static
