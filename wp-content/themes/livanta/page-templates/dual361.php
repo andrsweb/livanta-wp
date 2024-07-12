@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: ACF Flexible Content
+ * Template name: DUAL361
  *
  * @package WordPress
  * @subpackage livanta
@@ -14,7 +14,7 @@ get_header();
 	<?php
 	/**
 	 * 1. Please create ACF Flexible Content setting
-	 * for pages with slug 'flexible_content'.
+	 * for pages with slug 'dual361'.
 	 *
 	 * 2. Then set names of sections PHP-files
 	 * the same as ACF Flexible Content sections slugs.
@@ -23,17 +23,17 @@ get_header();
 	 * right inside its PHP-file directory.
 	 *
 	 * 4. Include these scripts & styles right inside your
-	 * PHP-file code from theme_name/static/acf-flexible-content.
+	 * PHP-file code from theme_name/static/dual361.
 	 *
 	 * @example
 	 * 'hero_section' in ACF Flexible Content sections
-	 * will use template from 'theme_name/acf-flexible-content/hero_section/hero_section.php'
+	 * will use template from 'theme_name/acf-dual361/hero_section/hero_section.php'
 	 */
-	if( have_rows( 'flexible_content' ) ){
-		while( have_rows( 'flexible_content' ) ){
+	if( have_rows( 'dual361' ) ){
+		while( have_rows( 'dual361' ) ){
 			the_row();
 			$slug = get_row_layout();
-			get_template_part( "acf-flexible-content/$slug/$slug" );
+			get_template_part( "acf-dual361/$slug/$slug" );
 		}
 	}
 	?>
