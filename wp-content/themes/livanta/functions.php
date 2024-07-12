@@ -20,9 +20,11 @@ function liv_load_theme_dependencies(): void
 {
 	// Register theme menus.
 	register_nav_menus( [
-		'header_menu'	=> esc_html__( 'Header Menu', 'livanta' ),
-		'footer_menu_1'	=> esc_html__( 'Footer Menu 1', 'livanta' ),
-		'footer_menu_2'	=> esc_html__( 'Footer Menu 2', 'livanta' )
+		'header_menu'             => __( 'Header Menu', 'livanta' ),
+		'footer_menu_1'           => __( 'Footer Menu 1', 'livanta' ),
+		'footer_menu_2'           => __( 'Footer Menu 2', 'livanta' ),
+		'header_menu_dual'        => __( 'Header Menu Dual', 'livanta' ),
+		'header_menu_dual_burger' => __( 'Header Menu Dual Burger', 'livanta' )
 	] );
 
 	// Auto-generate ACF Flexible Content templates files.
