@@ -48,12 +48,11 @@
 
 	.back {
 		margin-bottom: 20px;
+		color: $gentle-black;
 
 		@media all and (min-width: $md) {
 			margin-bottom: 30px;
 		}
-
-		color: $gentle-black;
 	}
 
 	&__texts {
@@ -70,11 +69,11 @@
 	}
 
 	p {
+		margin-bottom: 30px;
+
 		&:first-child {
 			margin-bottom: 0;
 		}
-
-		margin-bottom: 30px;
 	}
 
 	ul {
