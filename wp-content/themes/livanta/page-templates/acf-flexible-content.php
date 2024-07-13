@@ -33,7 +33,7 @@ get_header();
 		while( have_rows( 'flexible_content' ) ){
 			the_row();
 			$slug = get_row_layout();
-			get_template_part( "acf-flexible-content/{$slug}/{$slug}" );
+			get_template_part( "acf-flexible-content/$slug/$slug" );
 		}
 	}
 	?>

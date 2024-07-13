@@ -23,6 +23,12 @@ export default {
 		dest	: pathDest + '/css'
 	},
 
+	scssDual361	: {
+		src		: './acf-dual361/**/*.scss',
+		watch	: './acf-dual361/**/*.scss',
+		dest	: pathDest + '/css'
+	},
+
 	scssPages	: {
 		src		: pathSrc + '/scss/pages/**/*.scss',
 		watch	: pathSrc + '/scss/pages/**/*.scss',
@@ -30,8 +36,13 @@ export default {
 	},
 
 	js			: {
-		src		: [pathSrc + '/js/main.js', pathSrc + '/js/pages/**/*.js', './acf-flexible-content/**/*.js'],
-		watch	: [pathSrc + '/js/**/*.js', './acf-flexible-content/**/*.js'],
+		src		: [
+			pathSrc + '/js/main.js',
+			pathSrc + '/js/pages/**/*.js',
+			'./acf-flexible-content/**/*.js',
+			'./acf-dual361/**/*.js'
+		],
+		watch	: [pathSrc + '/js/**/*.js', './acf-flexible-content/**/*.js', './acf-dual361/**/*.js'],
 		dest	: pathDest + '/js'
 	},
 

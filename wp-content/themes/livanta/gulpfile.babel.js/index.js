@@ -7,7 +7,6 @@ import notify from 'gulp-notify'
 import autoprefixer from 'gulp-autoprefixer'
 import csso from 'gulp-csso'
 import rename from 'gulp-rename'
-import shorthand from 'gulp-shorthand'
 import groupCssMediaQueries	from 'gulp-group-css-media-queries'
 import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
@@ -44,7 +43,6 @@ const scss = () => {
 		.pipe( sass() )
 		.pipe( webpCss() )
 		.pipe( autoprefixer() )
-		.pipe( gulpIf( app.isProd, shorthand() ) )
 		.pipe( gulpIf( app.isProd, groupCssMediaQueries() ) )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( gulpIf( app.isProd, csso() ) )
@@ -63,11 +61,28 @@ const scssAcf = () => {
 		.pipe( sass() )
 		.pipe( webpCss() )
 		.pipe( autoprefixer() )
-		.pipe( gulpIf( app.isProd, shorthand() ) )
 		.pipe( gulpIf( app.isProd, groupCssMediaQueries() ) )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( gulpIf( app.isProd, csso() ) )
 		.pipe( gulp.dest( path.scssAcf.dest, { sourcemaps: app.isDev } ) )
+		.pipe( browserSync.stream() )
+}
+
+const scssDual361 = () => {
+	return gulp.src( path.scssDual361.src, { sourcemaps: app.isDev } )
+		.pipe( plumber( {
+			errorHandler: notify.onError( error => ( {
+				title	: 'ERROR IN SCSS DUAL361',
+				message	: error.message
+			} ) )
+		} ) )
+		.pipe( sass() )
+		.pipe( webpCss() )
+		.pipe( autoprefixer() )
+		.pipe( gulpIf( app.isProd, groupCssMediaQueries() ) )
+		.pipe( rename( { suffix: '.min' } ) )
+		.pipe( gulpIf( app.isProd, csso() ) )
+		.pipe( gulp.dest( path.scssDual361.dest, { sourcemaps: app.isDev } ) )
 		.pipe( browserSync.stream() )
 }
 
@@ -82,7 +97,6 @@ const scssPages = () => {
 		.pipe( sass() )
 		.pipe( webpCss() )
 		.pipe( autoprefixer() )
-		.pipe( gulpIf( app.isProd, shorthand() ) )
 		.pipe( gulpIf( app.isProd, groupCssMediaQueries() ) )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( gulpIf( app.isProd, csso() ) )
@@ -94,6 +108,7 @@ const watcher = () => {
 	gulp.watch( path.php.src ).on( 'all', browserSync.reload )
 	gulp.watch( path.scss.watch, scss )
 	gulp.watch( path.scssAcf.watch, scssAcf )
+	gulp.watch( path.scssDual361.watch, scssDual361 )
 	gulp.watch( path.scssPages.watch, scssPages )
 	gulp.watch( path.js.watch, js ).on( 'all', browserSync.reload )
 	gulp.watch( path.img.watch, img ).on( 'all', browserSync.reload )
@@ -102,7 +117,7 @@ const watcher = () => {
 
 const build = gulp.series(
 	clear,
-	gulp.parallel( scss, scssAcf, scssPages, js, img, fonts )
+	gulp.parallel( scss, scssAcf, scssDual361, scssPages, js, img, fonts )
 )
 
 const dev = gulp.series(

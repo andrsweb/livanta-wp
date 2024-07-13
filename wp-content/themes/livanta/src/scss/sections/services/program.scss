@@ -89,12 +89,11 @@
 
 .special {
 	padding: 30px 0;
+	background-color: #F4F4F4;
 
 	@media all and (min-width: $lg) {
 		padding: 120px 0;
 	}
-
-	background-color: #F4F4F4;
 	
 	.services__dropdowns {
 		background-color: #F4F4F4;
