@@ -9,7 +9,7 @@
  * @subpackage livanta
  */
 
-$logo		= get_field( 'logo', 'option' );
+$logo		= get_field( 'footer_logo', 'option' );
 $address	= get_field( 'address', 'option' );
 $phone		= get_field( 'phone', 'option' );
 $soc		= get_field( 'social_buttons', 'option' );
