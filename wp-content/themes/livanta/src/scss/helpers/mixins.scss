@@ -1,0 +1,74 @@
+//Body texts
+
+@mixin p1-bold() {
+	font-family: $ff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	line-height: 160%;
+
+	@media(min-width: $md) {
+		font-size: 18px;
+	}
+}
+
+@mixin p2-bold() {
+	font-family: $ff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	line-height: 160%;
+
+	@media(min-width: $md) {
+		font-size: 16px;
+	}
+}
+
+@mixin p3-bold() {
+	font-family: $ff;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	line-height: 160%;
+
+	@media(min-width: $md) {
+		font-size: 14px;
+	}
+}
+
+@mixin p1-reg() {
+	font-family: $ff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: $fw-medium;
+	line-height: 160%;
+
+	@media(min-width: $md) {
+		font-size: 18px;
+	}
+}
+
+@mixin p2-reg() {
+	font-family: $ff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: $fw-medium;
+	line-height: 160%;
+
+	@media(min-width: $md) {
+		font-size: 16px;
+	}
+}
+
+@mixin p3-reg() {
+	font-family: $ff;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: $fw-medium;
+	line-height: 160%;
+
+	@media(min-width: $md) {
+		font-size: 14px;
+	}
+}
+

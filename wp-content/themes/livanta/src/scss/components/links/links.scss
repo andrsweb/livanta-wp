@@ -1,0 +1,186 @@
+.link-arrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	color: $R500;
+	font-family: $ff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	line-height: 160%;
+	transition: opacity ease $tr;
+
+	svg {
+		width: 20px;
+		height: 20px;
+
+		path {
+			fill: $R500;
+		}
+	}
+
+	@media(min-width: $md) {
+		font-size: 16px;
+		gap: 6px;
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&.blue {
+		color: $B500;
+
+		svg path {
+			fill: $B500;
+		}
+	}
+
+	&:hover {
+		opacity: $op;
+	}
+}
+
+.link-full {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 20px;
+	background-color: $R500;
+	@include p2-bold();	
+	color: $white;
+
+	svg path {
+		fill: $white;
+	}
+
+
+	&.blue {
+		background-color: $B500;
+	}
+}
+
+.link-big {
+	display: inline-flex;
+	align-items: center;
+	gap: 92px;
+	padding: 36px;
+	font-family: $ff;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	line-height: 160%;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 10px;
+		height: 100%;
+		background-color: $R500;
+		z-index: -1;
+		transition: width ease $tr;
+	}
+
+	&-inner {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		svg path {
+			fill: $R500;
+		}
+	}
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&-title {
+		font-family: $ff;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: $fw-semibold;
+		color: $R500;
+		line-height: 160%;
+	}
+
+	&-text {
+		@include p1-reg();
+		color: $N900;
+		margin-top: -10px;
+	}
+
+	&-title, &-text {
+		transition: color ease $tr;
+	}
+
+	svg {
+		path {
+			transition: fill ease $tr;
+			fill: $R500;
+		}
+
+		circle {
+			transition: opacity ease 0.2s, fill ease 0.2s;
+		}
+	} 
+
+	&.blue {
+		&::before {
+			background-color: $B500;
+		}
+		
+		.link-big-title {
+			color: $B500;
+		}
+
+		.link-big-inner {
+			svg path {
+				fill: $B500;
+			}
+		}
+
+		svg  {
+			path {
+				fill: $B500;
+			}
+		}
+	}
+
+	&:hover {
+		opacity: 1;
+
+		.link-big-title, .link-big-text {
+			color: $white;
+		}
+
+		.link-big-inner {
+			svg path {
+				fill: $white;
+			}
+		}
+
+		svg  {
+			path {
+				fill: $white;
+			}
+			
+			circle {
+				opacity: 0.1;
+				fill: $white;
+				transition-delay: 0.1s;
+			}
+		}
+
+
+		&::before {
+			width: 100%;
+		}
+	}
+}

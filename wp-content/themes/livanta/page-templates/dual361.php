@@ -8,6 +8,9 @@
  */
 
 get_header();
+
+wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'hero', THEME_URI . '/static/js/hero/hero.min.js', ['jquery'], THEME_VERSION, true );
 ?>
 
 <main class="main">
@@ -38,7 +41,6 @@ get_header();
 	}
 	?>
 </main>
-
 <?php
 get_footer();
 

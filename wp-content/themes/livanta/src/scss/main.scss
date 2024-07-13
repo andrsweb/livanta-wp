@@ -8,8 +8,12 @@
 @import 'utils/grid/grid';
 @import 'utils/base/base';
 
+//Mixins
+@import 'helpers/mixins';
+
 // Components.
 @import 'components/buttons/buttons';
+@import 'components/links/links';
 @import './components/video';
 @import './components/scroll-down';
 @import './components/item-image';
