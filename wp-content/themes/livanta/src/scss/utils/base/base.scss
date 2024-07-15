@@ -99,8 +99,18 @@ button {
 	min-height: 100vh;
 	overflow: hidden;
 
-	.footer {
+	.footer, .footer-dual {
 		margin-top: auto
+	}
+}
+
+.page-template-dual361 {
+	.wrapper {
+		margin-top: 48px;
+
+		@media all and (min-width: $lg) {
+			margin-top: 60px;
+		}
 	}
 }
 

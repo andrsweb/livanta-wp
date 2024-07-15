@@ -50,6 +50,7 @@
 	background-color: $R500;
 	@include p2-bold();	
 	color: $white;
+	white-space: nowrap;
 
 	svg path {
 		fill: $white;
