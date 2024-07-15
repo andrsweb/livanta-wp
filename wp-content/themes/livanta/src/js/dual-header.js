@@ -1,3 +1,5 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import { setTargetElement, getTargetElement } from './common/global'
 import { WINDOW_WIDTH_LG } from "./common/global"
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -55,7 +57,16 @@ const toggleBurgerMenu = () => {
     const headerBox = document.querySelector('.header-dual-box')
 
     burgerButton.addEventListener('click', () => {
-        headerBox.classList.toggle('showed')
+		setTargetElement(document.querySelector('#header-box'))
+		if(!headerBox.classList.contains('showed')) {
+			headerBox.classList.add('showed')
+
+			
+			disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+		} else {
+			headerBox.classList.remove('showed') 
+			enableBodyScroll(getTargetElement())
+		}
 
         document.querySelectorAll('.sub-menu-wrapper').forEach(subMenu => {
             subMenu.classList.remove('showed')

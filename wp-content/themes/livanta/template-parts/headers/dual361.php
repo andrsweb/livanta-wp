@@ -56,7 +56,7 @@ $logo      = get_field( 'logo_dual', 'option' );
 			<a href="/" class="header-dual-logo">
 				<img src="<?php echo THEME_URI ?>/static/img/dual361/logo.png" alt="">
 			</a>
-			<div class="header-dual-box">
+			<div class="header-dual-box" id="header-box">
 				<div class="header-dual-inner">
 					<nav class="header-menu-dual">
 						<ul id="menu-header-menu-dual" class="menu">

@@ -38,9 +38,14 @@
 
 		&.showed {
 			.header-dual-inner {
-				// display: flex;
-			}
+				display: flex;
+				flex-direction: column;
+				overflow-y: auto;
 
+				@media(min-width: $lg) {
+					flex-direction: row;
+				}
+			}
 
 			.header-menu-dual-burger {
 				display: flex;
@@ -70,12 +75,13 @@
 		left: 0;
 		top: 48px;
 		width: 100%;
-		min-height: 100vh;
+		height: calc(100dvh - 48px);
+		background-color: $white;
 
 		@media(min-width: $lg) {
 			position: static;
 			width: auto;
-			min-height: auto;
+			height: auto;
 			display: flex;
 		}
 	}
@@ -83,24 +89,61 @@
 	.header-menu-dual {
 		.menu {
 			display: flex;
+			flex-direction: column;
 			align-items: center;
-			gap: 50px;
+			padding: 28px 20px;
+			gap: 28px;
+
+			@media(min-width: $lg) {
+				flex-direction: row;
+				gap: 50px;
+				padding: 0;
+			}
 
 			&-item {
+				width: 100%;
+				display: flex;
+				align-items: center;
+
+				&-has-children {
+					a {
+						@include p3-bold();
+						color: $N900;
+					}
+				}
+
+				&-has-children > a {
+					display: none;
+
+					@media(min-width: $lg) {
+						display: inline;
+					}
+				}
+
+				@media(min-width: $lg) {
+					width: auto;
+				}
+
 				a {
-					@include p3-bold();
 					color: $N900;
+					font-family: $ff;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: $fw-semibold;
+					line-height: 160%;
 				}
 
 				.sub-menu-wrapper {
-					box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.08);
 					justify-content: space-between;
 					width: 100%;
-					position: absolute;
-					right: 0;
-					top: 60px;
 					background-color: $white;
-					padding: 36px;
+
+					@media(min-width: $lg) {
+						position: absolute;
+						right: 0;
+						top: 60px;
+						padding: 36px;
+					}
 
 					&.blue {
 						.sub-menu {
@@ -116,15 +159,22 @@
 
 					.sub-menu {
 						width: 100%;
-						max-width: 192px;
 						display: flex;
 						flex-direction: column;
 						gap: 16px;
 						background-color: $white;
+
+						@media(min-width: $lg) {
+							max-width: 192px;
+						}
 						
 						.menu-item {
 							&-has-children {
 								cursor: default;
+
+								& > a {
+									display: block;
+								}
 							}
 			
 							a {
@@ -151,12 +201,16 @@
 					}
 
 					.sub-menu-text {
-						display: flex;
+						display: none;
 						flex-direction: column;
 						width: calc(100% - 286px);
 						gap: 20px;
 						padding-top: 10px;
 						cursor: auto;
+
+						@media(min-width: $lg) {
+							display: flex;
+						}
 
 						p {
 							color: $N500;
@@ -204,16 +258,26 @@
 
 	.header-menu-dual-burger {
 		display: none;
-		position: absolute;
-		right: 0;
-		top: 60px;
 		background-color: $B500;
-		padding: 36px;
+		padding: 24px;
+
+		@media(min-width: $lg) {
+			position: absolute;
+			right: 0;
+			top: 60px;	
+			padding: 36px;
+		}
+
 
 		.menu, .sub-menu {
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
+			gap: 16px;
+			width: 100%;
+
+			@media(min-width: $lg) {
+				gap: 20px;
+			}
 		}
 
 		.sub-menu {
@@ -245,10 +309,16 @@
 	}
 
 	.sub-menu-wrapper {
-		display: none;
+		display: flex;
+
+		@media(min-width: $lg) {
+			display: none;
+		}
 
 		&.showed {
-			display: flex;
+			@media(min-width: $lg) {
+				display: flex;
+			}
 		}
 	}
 }
