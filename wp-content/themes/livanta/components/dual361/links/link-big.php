@@ -1,3 +1,15 @@
+<?php
+
+/**
+ * Link layout, type big.
+ *
+ * @package WordPress
+ * @subpackage livanta
+ */
+
+$id = 'mask-' . mt_rand( 10000, 99999 ) . '-' . mt_rand( 10000, 99999 );
+?>
+
 <a href="#" class="link-big">
 	<span class="link-big-inner">
 		<svg width="96" height="52" viewBox="0 0 96 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,10 +26,10 @@
 	</span>
 	<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<circle cx="36" cy="36" r="36" fill="#FCF4F5"/>
-		<mask id="mask0_410_991" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="48" height="48">
+		<mask id="<?php echo $id ?>" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="48" height="48">
 			<rect x="12" y="60" width="48" height="48" transform="rotate(-90 12 60)" fill="#D9D9D9"/>
 		</mask>
-		<g mask="url(#mask0_410_991)">
+		<g mask="url(#<?php echo $id ?>)">
 			<path d="M49.2699 36.0005L37.9623 47.3081L35.8546 45.2005L45.0239 36.0005L35.8546 26.8005L37.9623 24.6928L49.2699 36.0005ZM37.3084 36.0005L26.0007 47.3081L23.8931 45.2005L33.0623 36.0005L23.8931 26.8005L26.0007 24.6928L37.3084 36.0005Z" fill="#BF1E2E"/>
 		</g>
 	</svg>
