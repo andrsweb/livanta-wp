@@ -1,6 +1,10 @@
 .footer-dual {
 	padding: 60px 0;
 
+	@media(min-width: $lg) {
+		padding: 120px 0 40px;
+	}
+
 	.container {
 		max-width: $xl;
 	}
@@ -16,6 +20,12 @@
 				height: 58px;
 			}
 		}
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
 	}
 
 	&-row {
@@ -61,21 +71,10 @@
 				}
 
 				.menu-item {
-
-					&-has-children > a {
+					a {
 						@include p3-bold();
-						pointer-events: none;
-						margin-bottom: 16px;
-
-						@media(min-width: $lg) {
-							margin-bottom: 20px;
-						}
+						color: $N900;
 					}
-				}
-
-				a {
-					@include p3-reg();
-					color: $N900;
 				}
 			}
 		}
@@ -86,6 +85,69 @@
 			@media(min-width: $lg) {
 				margin-top: 40px;
 			}
+		}
+	}
+
+	&-bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		padding-top: 24px;
+		border-top: 1px solid $N300;
+
+		@media(min-width: $md) {
+			padding-top: 39px;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		nav {
+			ul {
+				display: flex;
+				align-items: center;
+				gap: 7px;
+
+				@media(min-width: $md) {
+					gap: 11px;
+				}
+
+				li {
+					position: relative;
+					padding-right: 7px;
+
+					@media(min-width: $md) {
+						padding-right: 11px;
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						display: block;
+						width: 1px;
+						height: 50%;
+						background-color: $N900;
+					}
+
+					&:last-child {
+						&::after {
+							display: none;
+						}
+					}
+
+					a {
+						@include p3-bold();
+						color: $N900;
+					}
+				}
+			}
+		}
+
+		p {
+			@include p3-reg();
+			color: $grey;
 		}
 	}
 }

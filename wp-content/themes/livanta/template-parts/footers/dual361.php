@@ -25,7 +25,7 @@ $logo = get_field( 'logo_dual', 'option' );
 					<nav class="footer-dual-nav">
 						<ul id="footer-dual-top-1" class="menu">
 							<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-								<a href="#">About</a>
+								<a href="#">About Us</a>
 							</li>
 							<li id="menu-item-2431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
 								<a href="#">The DUAL361 Difference </a>
@@ -36,22 +36,20 @@ $logo = get_field( 'logo_dual', 'option' );
 				<div class="footer-dual-col">
 					<nav class="footer-dual-nav">
 						<ul id="footer-dual-top-2" class="menu">
-							<li id="menu-item-2432" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-575">
+							<li id="menu-item-2433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
 								<a href="#">Together in Health</a>
-								<ul class="sub-menu">
-									<li id="menu-item-2433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-										<a href="#">Member Health </a>
-									</li>
-									<li id="menu-item-2434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-										<a href="#">Absenteeism Reduction</a>
-									</li>
-									<li id="menu-item-24344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-										<a href="#">Member Advocacy</a>
-									</li>
-									<li id="menu-item-24355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-										<a href="#">Member Engagement</a>
-									</li>
-								</ul>
+							</li>
+							<li id="menu-item-2433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Member Health </a>
+							</li>
+							<li id="menu-item-2434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Absenteeism Reduction</a>
+							</li>
+							<li id="menu-item-24344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Member Advocacy</a>
+							</li>
+							<li id="menu-item-24355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Member Engagement</a>
 							</li>
 						</ul>
 					</nav>
@@ -70,25 +68,23 @@ $logo = get_field( 'logo_dual', 'option' );
 				<div class="footer-dual-col">
 					<nav class="footer-dual-nav">
 						<ul id="footer-dual-top-3" class="menu">
-							<li id="menu-item-24366" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-575">
-								<a href="#">Stronger in Business </a>
-								<ul class="sub-menu">
-									<li id="menu-item-24312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-									<a href="#">Analytics and Forecasting</a>
-									</li>
-									<li id="menu-item-243252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-										<a href="#">Provider Report Cards</a>
-									</li>
-									<li id="menu-item-243333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-										<a href="#">Network Optimization</a>
-									</li>
-									<li id="menu-item-2434444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-										<a href="#">Claims Analysis</a>
-									</li>
-									<li id="menu-item-2431231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
-										<a href="#">Pharmacy Benefits Management</a>
-									</li>
-								</ul>
+							<li id="menu-item-2431231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+							<a href="#">Stronger in Business </a>
+							</li>
+							<li id="menu-item-24312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+							<a href="#">Analytics and Forecasting</a>
+							</li>
+							<li id="menu-item-243252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Provider Report Cards</a>
+							</li>
+							<li id="menu-item-243333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Network Optimization</a>
+							</li>
+							<li id="menu-item-2434444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Claims Analysis</a>
+							</li>
+							<li id="menu-item-2431231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Pharmacy Benefits Management</a>
 							</li>
 						</ul>
 					</nav>
@@ -104,6 +100,24 @@ $logo = get_field( 'logo_dual', 'option' );
 						</svg>	
 					</a>
 				</div>
+			</div>
+			<div class="footer-dual-bottom">
+				<nav class="footer-dual-nav">
+					<ul id="footer-dual-top-1" class="menu">
+						<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+							<a href="#">Privacy Policy</a>
+						</li>
+						<li id="menu-item-2431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+							<a href="#">Terms of Use</a>
+						</li>
+						<li id="menu-item-2431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+							<a href="#">Accessibilitys</a>
+						</li>
+					</ul>
+				</nav>
+				<p>
+					©2024 DUAL361. All rights reserved.
+				</p>				
 			</div>
 		</div>
 	</div>
