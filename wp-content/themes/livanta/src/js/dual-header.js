@@ -21,9 +21,7 @@ const toggleSubMenu = () => {
 		if(!menuLink) return
 
         menuLink.addEventListener('click', e => {
-			if (window.innerWidth < WINDOW_WIDTH_LG) {
-                return
-            }
+			if (window.innerWidth < WINDOW_WIDTH_LG) return
 
             e.preventDefault()
             const subMenu = menuLink.nextElementSibling
@@ -34,8 +32,20 @@ const toggleSubMenu = () => {
                 }
             })
 
-			if(!subMenu.classList.contains('showed')) subMenu.classList.add('showed')
-			else subMenu.classList.remove('showed')
+			menuLinks.forEach(prevMenuLink => {
+				if (prevMenuLink !== menuLink) {
+					prevMenuLink.classList.remove('clicked')
+				}
+			});
+
+			if(!subMenu.classList.contains('showed')) {
+				subMenu.classList.add('showed')
+				menuLink.classList.add('clicked')
+			}
+			else {
+				subMenu.classList.remove('showed')
+				menuLink.classList.remove('clicked')
+			} 
 
             if (headerBox.classList.contains('showed')) {
                 headerBox.classList.remove('showed')
@@ -47,21 +57,26 @@ const toggleSubMenu = () => {
         if (!e.target.closest('.menu-item-has-children')) {
            subMenus.forEach(subMenu => {
                 subMenu.classList.remove('showed')
+				menuLinks.forEach(link => link.classList.remove('clicked'))
             })
         }
     })
+
+	window.addEventListener('resize', () => {
+		if(window.innerWidth >= WINDOW_WIDTH_LG) menuLinks.forEach(link => link.classList.remove('clicked'))
+	})
 }
 
 const toggleBurgerMenu = () => {
     const burgerButton = document.querySelector('.burger-button-dual')
     const headerBox = document.querySelector('.header-dual-box')
+	const menuLinks = document.querySelectorAll('.menu-item-has-children > a')
 
     burgerButton.addEventListener('click', () => {
 		setTargetElement(document.querySelector('#header-box'))
 		if(!headerBox.classList.contains('showed')) {
 			headerBox.classList.add('showed')
-
-			
+			menuLinks.forEach(link => link.classList.remove('clicked'))
 			disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
 		} else {
 			headerBox.classList.remove('showed') 
@@ -78,6 +93,10 @@ const toggleBurgerMenu = () => {
             headerBox.classList.remove('showed')
         }
     })
+
+	window.addEventListener('resize', () => {
+		if(window.innerWidth >= WINDOW_WIDTH_LG) headerBox.classList.remove('showed')
+	})
 }
 
 const headerScroll = () => {
