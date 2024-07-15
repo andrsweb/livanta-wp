@@ -24,6 +24,8 @@ export const isInScope = ( elementSelector, st, offset = 0 ) => {
     return false
 }
 
+export const WINDOW_WIDTH_LG = 992
+
 /**
  * Custom AJAX request.
  *

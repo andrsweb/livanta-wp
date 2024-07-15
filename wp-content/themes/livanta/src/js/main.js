@@ -14,3 +14,6 @@ import './send-form'
 import './opendDropdowns'
 import './pagination'
 import './single-post'
+
+//Dual361 scripts
+import './dual-header'

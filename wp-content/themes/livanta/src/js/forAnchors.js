@@ -14,6 +14,9 @@ const smoothScrollForAnchors = () => {
 
 	anchors.forEach( link => {
 		link.addEventListener( 'click', e => {
+
+			if(!anchor) return
+			
 			const
 				urlParts	= link.href.split( '#' ),
 				pageUrl		= urlParts[0],

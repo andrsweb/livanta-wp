@@ -25,18 +25,23 @@ const openDropdownsByClickingOnMenuItem = () => {
     if (!menuLinks.length) return
 
     menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const
-                urlParts = link.href.split('#'),
-                anchor = urlParts[1],
-                dropdown = document.querySelector(`#${anchor}`)
+		link.addEventListener('click', () => {
+			const urlParts = link.href.split('#')
 
-            if (
-                dropdown && dropdown.className &&
-                (dropdown.classList.contains('dropdown') || dropdown.classList.contains('techTab'))
-            ) dropdown.querySelector('.dropdown-title').click()
-        })
-    })
+			if (urlParts.length < 2 || !urlParts[1]) return
+	
+			const anchor = urlParts[1],
+				dropdown = document.querySelector(`#${anchor}`)
+	
+			if (
+				dropdown && dropdown.className &&
+				(dropdown.classList.contains('dropdown') || dropdown.classList.contains('techTab'))
+			) {
+				dropdown.querySelector('.dropdown-title').click();
+			}
+		});
+	});
+	
 }
 
 const tabs = () => {

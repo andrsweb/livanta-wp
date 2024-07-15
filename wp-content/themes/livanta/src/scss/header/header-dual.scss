@@ -1,0 +1,254 @@
+.header-dual {
+	width: 100%;
+	background-color: $white;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+
+	&-logo {
+		margin-right: auto;
+
+		img {
+			width: auto;
+			height: 32px;
+
+			@media(min-width: $lg) {
+				height: 42px;
+			}
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		padding-left: 20px;
+
+		@media(min-width: $lg) {
+			padding-left: 32px;
+		}
+	}
+
+	&-box {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+		position: relative;
+
+		&.showed {
+			.header-dual-inner {
+				// display: flex;
+			}
+
+
+			.header-menu-dual-burger {
+				display: flex;
+			}
+
+			.burger-button-dual {
+				span {
+					background-color: transparent;
+
+					&::before {
+						transform: rotate(45deg);
+						top: 0;
+					}
+
+					&::after {
+						transform: rotate(-45deg);
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&-inner {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 48px;
+		width: 100%;
+		min-height: 100vh;
+
+		@media(min-width: $lg) {
+			position: static;
+			width: auto;
+			min-height: auto;
+			display: flex;
+		}
+	}
+
+	.header-menu-dual {
+		.menu {
+			display: flex;
+			align-items: center;
+			gap: 50px;
+
+			&-item {
+				a {
+					@include p3-bold();
+					color: $N900;
+				}
+
+				.sub-menu-wrapper {
+					box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.08);
+					justify-content: space-between;
+					width: 100%;
+					position: absolute;
+					right: 0;
+					top: 60px;
+					background-color: $white;
+					padding: 36px;
+
+					&.blue {
+						.sub-menu {
+							.menu-item {
+								&:first-child {
+									a {
+										color: $B500;
+									}
+								}
+							}
+						}	
+					}
+
+					.sub-menu {
+						width: 100%;
+						max-width: 192px;
+						display: flex;
+						flex-direction: column;
+						gap: 16px;
+						background-color: $white;
+						
+						.menu-item {
+							&-has-children {
+								cursor: default;
+							}
+			
+							a {
+								pointer-events: all;
+								@include p3-bold();
+								color: $N500;
+								cursor: pointer;
+							}
+			
+							&:hover {
+								a {
+									opacity: $op;
+								}
+							}
+							
+							&:first-child {
+								a {
+									color: $R500;
+									pointer-events: none;
+									@include p2-bold();
+								}
+							}				
+						}
+					}
+
+					.sub-menu-text {
+						display: flex;
+						flex-direction: column;
+						width: calc(100% - 286px);
+						gap: 20px;
+						padding-top: 10px;
+						cursor: auto;
+
+						p {
+							color: $N500;
+							font-family: $ff;
+							font-size: 12px;
+							font-style: italic;
+							font-weight: $fw-regular;
+							line-height: 160%;
+							
+							&:first-child {
+								position: relative;
+
+								&::before {
+									content: '';
+									display: block;
+									width: 30%;
+									height: 1px;
+									background-color: $N300;
+									margin-bottom: 24px;
+								}
+							}
+						}
+					}
+				}
+
+				&:hover > a {
+					opacity: $op;
+				}
+
+				&> &-has-children {
+					display: flex;
+					cursor: pointer;
+
+					a {
+						pointer-events: none;
+					}
+				}
+
+				&-flex {
+					display: flex;
+				}
+			}
+		}
+	}
+
+	.header-menu-dual-burger {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 60px;
+		background-color: $B500;
+		padding: 36px;
+
+		.menu, .sub-menu {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.sub-menu {
+			margin-top: 20px;
+			border-top: 1px solid $white;
+			padding-top: 19px;
+		}
+
+		li {
+			a {
+				@include p3-bold();
+				color: $white;
+			}
+		}
+	}
+
+	&-ui {
+		display: flex;
+
+		.link-full {
+			text-transform: uppercase;
+			transition: background-color ease $tr;
+
+			&:hover {
+				opacity: 1;
+				background-color: $R600;
+			}
+		}
+	}
+
+	.sub-menu-wrapper {
+		display: none;
+
+		&.showed {
+			display: flex;
+		}
+	}
+}

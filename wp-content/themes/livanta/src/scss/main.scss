@@ -13,7 +13,6 @@
 
 // Components.
 @import 'components/buttons/buttons';
-@import 'components/links/links';
 @import './components/video';
 @import './components/scroll-down';
 @import './components/item-image';
@@ -83,3 +82,12 @@
 
 // Ethics page sections styles.
 @import 'sections/ethics/hero';
+
+
+// *****************************
+//Styles for Dual361 template
+//Components
+@import 'components/links/links';
+
+//Theme common
+@import 'header/header-dual';
