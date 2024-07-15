@@ -91,11 +91,13 @@ const toggleBurgerMenu = () => {
     document.addEventListener('click', e => {
         if (!e.target.closest('.header-dual-box') && !e.target.closest('.burger-button-dual')) {
             headerBox.classList.remove('showed')
+			enableBodyScroll(getTargetElement())
         }
     })
 
 	window.addEventListener('resize', () => {
 		if(window.innerWidth >= WINDOW_WIDTH_LG) headerBox.classList.remove('showed')
+		enableBodyScroll(getTargetElement())
 	})
 }
 
