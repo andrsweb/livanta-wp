@@ -40,6 +40,14 @@ wp_enqueue_script( 'hero', THEME_URI . '/static/js/hero/hero.min.js', ['jquery']
 		}
 	}
 	?>
+
+	<section class="hero-dual">
+		<div class="container">
+			<h1>
+			The health of your business is our business. 
+			</h1>
+		</div>
+	</section>
 </main>
 <?php
 get_footer();
