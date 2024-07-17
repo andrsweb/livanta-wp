@@ -1,0 +1,72 @@
+@import '../../src/scss/helpers/mixins';
+
+.cta {
+	padding: 60px 0;
+	background-color: $N700;
+
+	@media(min-width: $lg) {
+		padding: 120px 0;
+	}
+
+	&-wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		position: relative;
+
+		@media(min-width: $lg) {
+			flex-direction: row;
+			gap: 67px;
+		}
+	}
+
+	h2 {
+		width: 100%;
+		max-width: 340px;
+		margin-bottom: 0;
+		color: $white;
+	}
+
+	&-info {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		position: relative;
+		gap: 40px;
+
+		p {
+			@include p2-reg();
+			color: $white;
+		}
+
+		@media(min-width: $lg) {
+			width: calc(100% - 407px);
+		}
+	}
+
+	&-bg-img {
+		position: absolute;
+		right: 0;
+		top: 82%;
+		width: 200px;
+		height: 200px;
+		opacity: 0.1;
+
+		@media(min-width: $sm) {
+			top: 70%;
+		}
+
+		@media(min-width: $md) {
+			top: 80%;
+		}
+
+		@media(min-width: $lg) {
+			width: 480px;
+			height: 288px;
+			right: -70px;
+			top: 50%;
+		}
+	}
+}
