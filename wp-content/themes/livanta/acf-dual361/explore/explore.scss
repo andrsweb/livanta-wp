@@ -1,0 +1,72 @@
+@import '../../src/scss/helpers/mixins';
+
+.explore {
+	padding: 60px 0;
+	
+
+	@media(min-width: $xl) {
+		padding: 120px 0;
+	}
+
+	&-bg {
+		width: 436px;
+		height: 229px;
+		position: absolute;
+		left: -130px;
+		top: -50px;
+		z-index: -1;
+		opacity: 0.05;
+
+		@media(min-width: $lg) {
+			width: 720px;
+			height: 378px;
+			left: -365px;
+			top: -30px;
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		position: relative;
+
+		@media(min-width: $lg) {
+			gap: 72px;
+			flex-direction: row;
+		}
+	}
+
+	&-info {
+		width: 100%;
+		max-width: 538px;
+
+		@media(min-width: $lg) {
+		
+		}
+
+		h2 {
+			max-width: 282px;
+			margin-bottom: 0;
+
+			@media(min-width: $sm) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&-links {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		@media(min-width: $md) {
+			flex-direction: row;
+		}
+
+		@media(min-width: $lg) {
+			gap: 36px;
+			flex-direction: column;
+		}
+	}
+}

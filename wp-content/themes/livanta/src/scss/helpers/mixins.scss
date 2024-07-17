@@ -1,5 +1,6 @@
-//Body texts
+@import '../utils/vars/vars';
 
+//Body texts
 @mixin p1-bold() {
 	font-family: $ff;
 	font-size: 16px;
@@ -69,6 +70,14 @@
 
 	@media(min-width: $md) {
 		font-size: 14px;
+	}
+}
+
+@mixin text-gap() {
+	gap: 20px;
+
+	@media(min-width: $lg) {
+		gap: 24px;
 	}
 }
 

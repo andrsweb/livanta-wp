@@ -41,3 +41,47 @@
 		background-color: $B700;
 	}
 }
+
+.swiper-prev, .swiper-next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 32px;
+	height: 32px;
+	border: 1px solid $N900;
+	cursor: pointer;
+	transition: background-color ease $tr,
+		opacity ease $tr;
+
+	svg {
+		width: 16px;
+		height: 16px;
+
+		@media(min-width: $lg) {
+			width: 24px;
+			height: 16px;
+		}
+	}
+
+	@media(min-width: $lg) {
+		width: 48px;
+		height: 48px;
+	}
+
+	&:hover {
+		background-color: $N900;
+
+		svg path {
+			fill: $white
+		}
+	}
+
+	&:active {
+		background-color: $N600;
+	}
+}
+
+.swiper-button-disabled {
+	opacity: 0.3;
+	cursor: not-allowed;
+}

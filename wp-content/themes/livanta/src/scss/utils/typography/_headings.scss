@@ -57,3 +57,21 @@ h5, .h5 {
 h6, .h6 {
 	font-size: $fs-lg
 }
+
+.page-template-dual361 {
+	h1 {
+		margin-bottom: 24px;
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 40px;
+		}
+	}
+
+	h2 {
+		margin-bottom: 24px;
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 40px;
+		}
+	}
+}

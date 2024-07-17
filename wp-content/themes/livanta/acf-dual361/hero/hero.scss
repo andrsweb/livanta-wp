@@ -1,0 +1,162 @@
+@import '../../src/scss/helpers/mixins';
+
+.hero-dual {
+	@media(min-width: $xl) {
+		height: 700px;
+		position: relative;
+		padding: 80px 0;
+	}
+
+	&-wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+
+		@media(min-width: $xl) {
+			flex-direction: row;
+		}
+	}
+
+	&.bg {
+		h1 {
+			color: $white;
+		}
+
+		p {
+			color: $white;
+		}
+	}
+
+	&.blue {
+		h1 {
+			color: $B500;
+		}
+	}
+
+	&-info {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		position: relative;
+		padding: 60px 0;
+
+		@media(min-width: $xl) {
+			max-width: 660px;
+			position: static;
+			padding: 0;
+		}
+
+		h1 {
+			color: $R500;
+		}
+
+		h3 {
+			color: $N900
+		}
+
+		p {
+			@include p2-reg;
+			color: $N900;
+		}
+
+		&-inner {
+			width: 100%; 
+			max-width: 660px;
+		}
+
+		&-img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100%;
+			z-index: -1;
+			margin-left: calc(50% - 50vw);
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+
+				@media(min-width: $xl) {
+					position: static;
+				}
+			}
+
+			@media(min-width: $xl) {
+				width: 60%;
+				margin-left: 0;
+			}
+		}
+
+		.hero-dual-text {
+			display: flex;
+			flex-direction: column;
+			@include text-gap();
+		}
+
+		.link-big {
+			margin-top: 24px;
+		}
+	}
+
+	&-img {
+		width: 100vw;
+		height: 68.8vw;
+		position: relative;
+		margin-left: calc(50% - 50vw);
+
+		@media(min-width: $xl) {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 40%;
+			height: 100%;
+			margin-left: 0;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			@media(min-width: $xl) {
+				position: static;
+			}
+		}
+	}
+}
+
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 8px;
+	
+	.breadcrumb {
+		@include p3-bold;
+		color: $N400;
+
+		&::after {
+			content: '/';
+			margin-left: 8px;
+			color: $N400;
+		}
+
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+
+		&.current {
+			color: $N900;
+			pointer-events: none;
+		}
+	}
+}

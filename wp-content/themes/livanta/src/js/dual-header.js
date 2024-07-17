@@ -77,10 +77,10 @@ const toggleBurgerMenu = () => {
 		if(!headerBox.classList.contains('showed')) {
 			headerBox.classList.add('showed')
 			menuLinks.forEach(link => link.classList.remove('clicked'))
-			disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+			disableBodyScroll(document.querySelector('#header-box'), { reserveScrollBarGap: true })
 		} else {
 			headerBox.classList.remove('showed') 
-			enableBodyScroll(getTargetElement())
+			enableBodyScroll(document.querySelector('#header-box'))
 		}
 
         document.querySelectorAll('.sub-menu-wrapper').forEach(subMenu => {
@@ -91,13 +91,13 @@ const toggleBurgerMenu = () => {
     document.addEventListener('click', e => {
         if (!e.target.closest('.header-dual-box') && !e.target.closest('.burger-button-dual')) {
             headerBox.classList.remove('showed')
-			enableBodyScroll(getTargetElement())
+			enableBodyScroll(document.querySelector('#header-box'))
         }
     })
 
 	window.addEventListener('resize', () => {
 		if(window.innerWidth >= WINDOW_WIDTH_LG) headerBox.classList.remove('showed')
-		enableBodyScroll(getTargetElement())
+		enableBodyScroll(document.querySelector('#header-box'))
 	})
 }
 

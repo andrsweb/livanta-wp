@@ -1,0 +1,161 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-quotes {
+	background-color: $N100;
+	padding: 60px 0;
+
+	&-inner {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		background-color: $white;
+		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.04);
+
+		@media(min-width: $lg) {
+			flex-direction: row;
+			min-height: 400px;
+		}
+	}
+
+	&-img {
+		display: block;
+		width: 100%;
+		height: 440px;
+		position: relative;
+
+		@media(min-width: $lg) {
+			width: 400px;
+			height: auto;
+		}
+
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&-info {
+		width: 100%;
+		position: relative;
+		padding: 68px 20px 20px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 60px;
+
+		@media(min-width: $lg) {
+			width: calc(100% - 400px);
+			padding: 116px 48px 48px 48px;
+			gap: 88px;
+		}
+
+		img {
+			width: 94px;
+			height: 83px;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+
+			@media(min-width: $lg) {
+				width: 129px;
+				height: 114px;
+				top: 50px;
+				left: 50px;
+			}
+		}
+
+		p {
+			color: $N900;
+			font-family: $ff;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: $fw-semibold;
+			line-height: 160%;
+			position: relative;
+			z-index: 1 ;
+
+			@media(min-width: $lg) {
+				font-size: 24px;
+			}
+		}
+	}
+
+	&-author {
+		display: flex;
+		flex-direction: column;
+		padding-top: 16px;
+		position: relative;
+		max-width: 234px;
+
+		@media(min-width: $lg) {
+			padding-top: 31px;
+			max-width: 100%;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 30%;
+			height: 1px;
+			background-color: $N300;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			@media(min-width: $lg) {
+				width: 9%;
+			}
+		}
+	}
+
+	&-name {
+		@include p1-bold();
+		color: $N900;
+		margin-bottom: 4px;
+
+		@media(min-width: $lg) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&-position {
+		@include p1-reg;
+		color: $N500;
+	}
+
+	&-ui {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 24px;
+
+		@media(min-width: $lg) {
+			margin-top: 40px;
+		}
+
+		.swiper-scrollbar {
+			position: static;
+			width: 120px;
+			height: 2px;
+			background-color: $N300;
+
+			@media(min-width: $lg) {
+				width: 200px;
+			}
+
+			&-drag {
+				width: 100%;
+				background-color: $N900;
+			}
+		}
+	}
+
+	&-arrows {
+		display: flex;
+		gap: 12px;
+	}
+}
