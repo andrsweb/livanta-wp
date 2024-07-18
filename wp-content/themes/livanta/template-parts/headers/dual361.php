@@ -11,8 +11,9 @@
 
 global $page, $paged;
 
-$site_desc = get_bloginfo( 'description', 'display' );
-$logo      = get_field( 'logo_dual', 'option' );
+$site_desc     = get_bloginfo( 'description', 'display' );
+$logo          = get_field( 'logo_dual', 'option' );
+$header_button = get_field( 'header_button_dual', 'option' );
 ?>
 
 <!doctype html>
@@ -53,9 +54,16 @@ $logo      = get_field( 'logo_dual', 'option' );
 <div class="wrapper">
 	<header class="header-dual">
 		<div class="header-dual-wrapper">
-			<a href="/" class="header-dual-logo">
-				<img src="<?php echo THEME_URI ?>/static/img/dual361/logo-header.png" alt="">
-			</a>
+			<?php
+			if( $logo ){
+				?>
+				<a href="<?php bloginfo( 'url' ) ?>" class="header-dual-logo">
+					<?php echo wp_get_attachment_image( $logo, 'full' ) ?>
+				</a>
+				<?php
+			}
+			?>
+
 			<div class="header-dual-box" id="header-box">
 				<div class="header-dual-inner">
 					<?php
@@ -73,7 +81,19 @@ $logo      = get_field( 'logo_dual', 'option' );
 					?>
 				</div>
 				<div class="header-dual-ui">
-					<a class="link-full" href="#"><?php _e( 'Contact us', 'livanta' ) ?></a>
+					<?php
+					if( $header_button ){
+						$btn_title  = $header_button['title'] ?? '';
+						$btn_url    = $header_button['url'] ?? '#';
+						$btn_target = $header_button['target'] ? ' target="_blank"' : '';
+						?>
+						<a class="link-full" href="<?php echo esc_url( $btn_url ) ?>"<?php echo $btn_target ?>>
+							<?php echo esc_html( $btn_title ) ?>
+						</a>
+						<?php
+					}
+					?>
+
 					<button class="burger-button-dual">
 						<span></span>
 					</button>
