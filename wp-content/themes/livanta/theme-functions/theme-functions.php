@@ -152,3 +152,5 @@ function liv_load_template_part( string $template_name, string $part_name = null
  */
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
+
+

@@ -33,6 +33,7 @@ function liv_load_theme_dependencies(): void
 	require_once( 'theme-functions/theme-functions.php' );
 	require_once( 'theme-functions/custom-post-types.php' );
 	require_once( 'theme-functions/ajax.php' );
+	require_once( 'theme-functions/header-nav.php' );
 }
 
 add_action( 'init', 'liv_init_theme' );
