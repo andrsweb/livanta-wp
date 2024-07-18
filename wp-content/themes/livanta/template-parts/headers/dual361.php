@@ -58,6 +58,7 @@ $logo      = get_field( 'logo_dual', 'option' );
 			</a>
 			<div class="header-dual-box" id="header-box">
 				<div class="header-dual-inner">
+					<!--
 					<nav class="header-menu-dual">
 						<ul id="menu-header-menu-dual" class="menu">
 							<li id="menu-item-572" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-572">
@@ -134,12 +135,18 @@ $logo      = get_field( 'logo_dual', 'option' );
 								<a href="#">Log In</a>
 							</li>
 						</ul>
-					</nav>	
+					</nav>
+					-->
 					<?php
-							wp_nav_menu( [
-					'theme_location'  => 'header_menu_dual_burger',
-					'container'       => 'nav',
-					'container_class' => 'header-menu-dual-burger'
+					wp_nav_menu( [
+						'theme_location'  => 'header_menu_dual',
+						'container'       => 'nav',
+						'container_class' => 'header-menu-dual'
+					] );
+					wp_nav_menu( [
+						'theme_location'  => 'header_menu_dual_burger',
+						'container'       => 'nav',
+						'container_class' => 'header-menu-dual-burger'
 					] );
 					?>
 				</div>

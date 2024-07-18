@@ -50,7 +50,10 @@
 		p {
 			text-align: center;
 			@include p2-reg();
-			color: $N500;
+
+			& {
+				color: $N500
+			}
 		}
 
 		&-text {
@@ -102,7 +105,10 @@
 		.dual-info-item-title {
 			color: $N900;
 			@include p2-bold();
-			margin-bottom: 4px;
+
+			& {
+				margin-bottom: 4px
+			}
 		}
 
 		.link-arrow {

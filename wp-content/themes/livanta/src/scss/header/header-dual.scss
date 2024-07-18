@@ -113,7 +113,10 @@
 				&-has-children {
 					a {
 						@include p3-bold();
-						color: $N900;
+
+						& {
+							color: $N900
+						}
 					}
 				}
 
@@ -189,8 +192,11 @@
 							a {
 								pointer-events: all;
 								@include p3-bold();
-								color: $N500;
-								cursor: pointer;
+
+								& {
+									color: $N500;
+									cursor: pointer
+								}
 							}
 			
 							&:hover {
@@ -294,7 +300,10 @@
 		li {
 			a {
 				@include p3-bold();
-				color: $white;
+
+				& {
+					color: $white
+				}
 			}
 		}
 	}

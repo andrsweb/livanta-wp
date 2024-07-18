@@ -38,7 +38,10 @@
 
 		p {
 			@include p2-reg();
-			color: $white;
+
+			& {
+				color: $white
+			}
 		}
 
 		@media(min-width: $lg) {
