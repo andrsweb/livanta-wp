@@ -114,8 +114,11 @@
 
 	&-name {
 		@include p1-bold();
-		color: $N900;
-		margin-bottom: 4px;
+
+		& {
+			color: $N900;
+			margin-bottom: 4px
+		}
 
 		@media(min-width: $lg) {
 			margin-bottom: 8px;
@@ -124,7 +127,10 @@
 
 	&-position {
 		@include p1-reg;
-		color: $N500;
+
+		& {
+			color: $N500
+		}
 	}
 
 	&-ui {

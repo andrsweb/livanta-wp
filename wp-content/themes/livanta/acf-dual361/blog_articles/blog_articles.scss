@@ -74,17 +74,22 @@
 	&-date {
 		color: $N500;
 		@include p3-reg();
-		margin-bottom: 8px;
-	}	
+
+		& {
+			margin-bottom: 8px
+		}
+	}
 
 	p {
 		@include p1-bold();
-		color: $N900;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		overflow: hidden; 
 
+		& {
+			color: $N900;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden
+		}
 
 		&:last-of-type {
 			margin-bottom: 46px;

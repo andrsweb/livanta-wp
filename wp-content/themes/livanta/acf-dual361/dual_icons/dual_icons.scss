@@ -55,8 +55,11 @@
 
 		p {
 			@include p1-bold();
-			color: $N900;
-			text-align: center;
+
+			& {
+				color: $N900;
+				text-align: center
+			}
 		}
 	}
 

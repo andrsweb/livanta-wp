@@ -58,7 +58,10 @@
 
 		p {
 			@include p2-reg;
-			color: $N900;
+
+			& {
+				color: $N900
+			}
 		}
 
 		&-inner {
@@ -140,7 +143,10 @@
 	
 	.breadcrumb {
 		@include p3-bold;
-		color: $N400;
+
+		& {
+			color: $N400
+		}
 
 		&::after {
 			content: '/';

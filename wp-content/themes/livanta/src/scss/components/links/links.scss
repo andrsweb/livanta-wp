@@ -48,9 +48,16 @@
 	gap: 10px;
 	padding: 8px 16px;
 	background-color: $R500;
-	@include p2-bold();	
-	color: $white;
-	white-space: nowrap;
+	@include p2-bold();
+
+	& {
+		color: $white;
+		white-space: nowrap;
+	}
+
+	@media(min-width: $lg) {
+		padding: 12px 20px;
+	}
 
 	svg path {
 		fill: $white;
@@ -58,10 +65,6 @@
 
 	&.blue {
 		background-color: $B500;
-	}
-
-	@media(min-width: $lg) {
-		padding: 12px 20px;
 	}
 }
 
@@ -144,8 +147,11 @@
 
 	&-text {
 		@include p1-reg();
-		color: $N900;
-		margin-top: -10px;
+
+		& {
+			color: $N900;
+			margin-top: -10px
+		}
 	}
 
 	&-title, &-text {

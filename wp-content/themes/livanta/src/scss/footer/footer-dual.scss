@@ -5,10 +5,6 @@
 		padding: 120px 0 40px;
 	}
 
-	// .container {
-	// 	max-width: $xl;
-	// }
-
 	&-logo {
 		display: inline-block;
 
@@ -73,7 +69,10 @@
 				.menu-item {
 					a {
 						@include p3-bold();
-						color: $N900;
+
+						& {
+							color: $N900
+						}
 					}
 				}
 			}
@@ -139,7 +138,10 @@
 
 					a {
 						@include p3-bold();
-						color: $N900;
+
+						& {
+							color: $N900
+						}
 					}
 				}
 			}
@@ -147,7 +149,10 @@
 
 		p {
 			@include p3-reg();
-			color: $grey;
+
+			& {
+				color: $grey
+			}
 		}
 	}
 }

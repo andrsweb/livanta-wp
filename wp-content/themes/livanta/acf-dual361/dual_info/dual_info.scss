@@ -43,15 +43,20 @@
 		}
 
 		p {
-			
 			@include p2-reg();
-			color: $N500;
+
+			& {
+				color: $N500
+			}
 		}
 
 		a {
 			@include p2-reg();
-			color: $N500;
-			text-decoration: underline;
+
+			& {
+				color: $N500;
+				text-decoration: underline
+			}
 
 			&:hover {
 				text-decoration: none;
@@ -101,7 +106,10 @@
 
 	.dual-text-title {
 		@include p1-bold();
-		color: $N500;
-		margin-bottom: 12px;
+
+		& {
+			color: $N500;
+			margin-bottom: 12px
+		}
 	}
 }

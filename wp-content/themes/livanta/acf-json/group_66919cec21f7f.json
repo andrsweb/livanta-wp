@@ -25,10 +25,10 @@
                     "sub_fields": [
                         {
                             "key": "field_66919d1b26af3",
-                            "label": "Text",
-                            "name": "text",
+                            "label": "Type",
+                            "name": "type",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "radio",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -37,11 +37,217 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "choices": {
+                                "bg": "Background Image",
+                                "color": "Background Color",
+                                "member": "Red Title (Member)",
+                                "empower": "Blue Title (Empower)"
+                            },
+                            "default_value": "bg",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_66998acc7cbeb",
+                            "label": "Background Image",
+                            "name": "bg_img",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66919d1b26af3",
+                                        "operator": "==",
+                                        "value": "bg"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_66998b017cbed",
+                            "label": "Background Color",
+                            "name": "bg_color",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66919d1b26af3",
+                                        "operator": "==",
+                                        "value": "color"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#fff",
+                            "enable_opacity": 0,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_66998b497cbee",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Please use em HTML tag for italic",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "34",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "<em>italic text example<\/em>",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_66998b557cbef",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_66998aeb7cbec",
+                            "label": "Image",
+                            "name": "img",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_669992f6d0275",
+                            "label": "Button",
+                            "name": "button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "34",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_66999315d0276",
+                            "label": "Button Description",
+                            "name": "button_desc",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_669992f6d0275",
+                                        "operator": "!=empty"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_669994d92dada",
+                            "label": "Button Type",
+                            "name": "button_type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_669992f6d0275",
+                                        "operator": "!=empty"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "blue": "Blue",
+                                "red": "Red"
+                            },
+                            "default_value": "blue",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
                         }
                     ],
                     "min": "",
@@ -71,5 +277,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720819062
+    "modified": 1721342442
 }
