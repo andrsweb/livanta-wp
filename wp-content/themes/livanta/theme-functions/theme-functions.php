@@ -152,5 +152,22 @@ function liv_load_template_part( string $template_name, string $part_name = null
  */
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
+/**
+ * Return prepared array of ACF Link field data.
+ *
+ * @param $link
+ * @return array
+ */
+function liv_get_acf_link_data( $link ): array
+{
+	if ( ! $link || ! is_array( $link ) ) return [];
+
+	return [
+		'url'    => isset( $link['url'] ) ? esc_url( $link['url'] ) : '',
+		'title'  => isset( $link['title'] ) ? esc_html( $link['title'] ) : '',
+		'target' => ( isset( $link['target'] ) && $link['target'] ) ? ' target="_blank"' : ''
+	];
+}
+
 
 
