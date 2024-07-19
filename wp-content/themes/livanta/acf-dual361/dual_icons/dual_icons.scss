@@ -2,7 +2,11 @@
 
 .dual-icons {
 	background-color: $N100;
-	padding: 60px 0;
+	padding: 60px 0 30px;
+
+	@media(min-width: $xl) {
+		padding: 120px 0;
+	}
 
 	&-wrapper {
 		width: 100%;

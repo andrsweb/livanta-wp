@@ -24,6 +24,9 @@ $logo = get_field( 'logo_dual', 'option' );
 				<div class="footer-dual-col">
 					<nav class="footer-dual-nav">
 						<ul id="footer-dual-top-1" class="menu">
+						<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
+								<a href="#">Livanta LLC</a>
+							</li>
 							<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243">
 								<a href="#">About Us</a>
 							</li>
