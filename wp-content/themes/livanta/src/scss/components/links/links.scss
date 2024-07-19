@@ -1,5 +1,5 @@
 .link-arrow {
-	display: inline-flex;
+	display: inline;
 	align-items: center;
 	gap: 4px;
 	color: $R500;
@@ -9,10 +9,13 @@
 	font-weight: $fw-semibold;
 	line-height: 160%;
 	transition: opacity ease $tr;
+	position: relative;
 
 	svg {
 		width: 20px;
 		height: 20px;
+		position: absolute;
+		margin-left: 4px;
 
 		path {
 			fill: $R500;
