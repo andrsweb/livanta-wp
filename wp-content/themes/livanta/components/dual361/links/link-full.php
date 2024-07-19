@@ -12,9 +12,10 @@ $title       = $args['title'] ?? '';
 $url         = $args['url'] ?? '#';
 $target      = $args['target'] ?? '';
 $leading_svg = isset( $args['leading_svg'] ) && $args['leading_svg'] === 1;
+$type        = $args['type'] ?? 'red';
 ?>
 
-<a href="<?php echo esc_url( $url ) ?>" class="link-full"<?php echo $target ?>>
+<a href="<?php echo esc_url( $url ) ?>" class="link-full <?php echo esc_attr( $type ) ?>"<?php echo $target ?>>
 	<?php
 	if( $leading_svg ){
 		?>

@@ -24,7 +24,11 @@ function liv_load_theme_dependencies(): void
 		'footer_menu_1'           => __( 'Footer Menu 1', 'livanta' ),
 		'footer_menu_2'           => __( 'Footer Menu 2', 'livanta' ),
 		'header_menu_dual'        => __( 'Header Menu Dual', 'livanta' ),
-		'header_menu_dual_burger' => __( 'Header Menu Dual Burger', 'livanta' )
+		'header_menu_dual_burger' => __( 'Header Menu Dual Burger', 'livanta' ),
+		'footer_menu_dual_1'      => __( 'Footer Menu Dual 1', 'livanta' ),
+		'footer_menu_dual_2'      => __( 'Footer Menu Dual 2', 'livanta' ),
+		'footer_menu_dual_3'      => __( 'Footer Menu Dual 3', 'livanta' ),
+		'footer_menu_dual_bottom' => __( 'Footer Menu Dual Bottom', 'livanta' ),
 	] );
 
 	// Auto-generate ACF Flexible Content templates files.
