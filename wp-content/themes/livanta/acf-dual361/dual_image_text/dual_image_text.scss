@@ -1,0 +1,91 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-image-text {
+	padding: 60px 0;
+
+	@media(min-width: $xl) {
+		padding: 120px 0;
+	}
+
+	&-items {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+
+		@media(min-width: $lg) {
+			gap: 120px;
+		}
+	}
+
+	&-item {
+		&.reverse {
+			.dual-image-text-wrapper {
+				@media(min-width: $xl) {
+					flex-direction: row-reverse;
+				}
+			}
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 32px;
+
+		@media(min-width: $xl) {
+			flex-direction: row;
+			align-items: center;
+			gap: 60px;
+		}
+	}
+
+	&-inner {
+		width: 100%;
+
+		@media(min-width: $xl) {
+			max-width: 640px;
+		}
+	}
+
+	&-paragraphs {
+		display: flex;
+		flex-direction: column;
+		@include text-gap();
+
+		p {
+			@include p2-reg();
+			color: $N500;
+		}
+	}
+
+	&-links {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+		margin-top: 32px;
+
+		@media(min-width: $xl) {
+			margin-top: 60px;
+		}
+	}
+
+	&-img {
+		width: 100%;
+		max-width: 500px;
+		min-height: 388px;
+		margin: 0 auto;
+
+		@media(min-width: $xl) {
+			min-height: 550px;
+			width: calc(100% - 560px);
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

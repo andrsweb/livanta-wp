@@ -21,6 +21,7 @@ wp_enqueue_style( 'dual_quotes', THEME_URI . '/static/css/dual_quotes/dual_quote
 wp_enqueue_script( 'dual_quotes', THEME_URI . '/static/js/dual_quotes/dual_quotes.min.js', ['jquery'], THEME_VERSION, true );
 wp_enqueue_style( 'cta', THEME_URI . '/static/css/cta/cta.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'dual_global_text', THEME_URI . '/static/css/dual_global_text/dual_global_text.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'dual_image_text', THEME_URI . '/static/css/dual_image_text/dual_image_text.min.css', [], THEME_VERSION );
 ?>
 
 <main class="main">
@@ -558,6 +559,152 @@ wp_enqueue_style( 'dual_global_text', THEME_URI . '/static/css/dual_global_text/
 					<p>
 						DUAL361 gives your employees access to a range of clinical support services to help them get healthy and stay healthy longer. From preventive care to chronic disease management, from the break room to the waiting room, DUAL361 is there when your employees have questions, need guidance, or are in the throes of a healthcare emergency or hospitalization. We support your employees on their healthcare journey and keep them engaged as they return to work. 
 					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="dual-image-text">
+		<div class="container">
+			<div class="dual-image-text-items">
+				<div class="dual-image-text-item">
+					<div class="dual-image-text-wrapper">
+						<div class="dual-image-text-inner">
+							<h2>
+								Member Health
+							</h2>
+							<div class="dual-image-text-paragraphs">
+								<p>
+									Member Health is an essential aspect of MEMBER361’s offerings, because a healthier workforce is a more engaged and productive workforce. Our Member Health component supports your employees in their health and contributes to the broader goals of reducing overall healthcare costs and enhancing productivity. 
+								</p>
+							</div>
+							<div class="dual-image-text-links">
+								<a href="#" class="link-arrow">
+									Learn more about our Member Health program
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask
+											id="it" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24"
+										>
+											<rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+										</mask>
+										<g mask="url(#it">
+											<path
+												d="M17.1269 12.75H5V11.25H17.1269L11.4308 5.55383L12.5 4.5L20 12L12.5 19.5L11.4308 18.4461L17.1269 12.75Z"
+												fill="#BF1E2E"
+											/>
+										</g>
+									</svg>
+								</a>
+								<a href="#" class="link-arrow">
+									Learn more about our we help reduce absenteeism
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask
+											id="it" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24"
+										>
+											<rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+										</mask>
+										<g mask="url(#it">
+											<path
+												d="M17.1269 12.75H5V11.25H17.1269L11.4308 5.55383L12.5 4.5L20 12L12.5 19.5L11.4308 18.4461L17.1269 12.75Z"
+												fill="#BF1E2E"
+											/>
+										</g>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="dual-image-text-img">
+							<img src="<?php echo THEME_URI?>/static/img/dual361/it1.jpg" alt="">
+						</div>
+					</div>				
+				</div>
+				<div class="dual-image-text-item reverse">
+					<div class="dual-image-text-wrapper">
+						<div class="dual-image-text-inner">
+							<h2>
+								Member Advocacy 
+							</h2>
+							<div class="dual-image-text-paragraphs">
+								<p>
+									Our Member Advocacy program addresses employees’ healthcare needs, encompassing a wide range of support for medical decisions to everyday healthcare navigation. Our advocates help resolve pharmacy issues, assist with billing problems, and ensure comprehensive support for healthcare needs including social determinants of health. 
+								</p>
+								<p>
+									Member Advocacy is a foundational element of our member services, offering comprehensive support for medical care and optimizing health outcomes. Our highly skilled patient advocates stand as a beacon of support, playing a crucial role in helping your employees avoid costly hospital readmissions and emergency visits. With individualized support, our advocates guide your employees throughout their healthcare journeys. 
+								</p>
+							</div>
+							<div class="dual-image-text-links">
+								<a href="#" class="link-arrow">
+									Learn more about our Member Advocacy program
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask
+											id="it" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24"
+										>
+											<rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+										</mask>
+										<g mask="url(#it">
+											<path
+												d="M17.1269 12.75H5V11.25H17.1269L11.4308 5.55383L12.5 4.5L20 12L12.5 19.5L11.4308 18.4461L17.1269 12.75Z"
+												fill="#BF1E2E"
+											/>
+										</g>
+									</svg>
+								</a>
+								<a href="#" class="link-arrow">
+									Learn more about how we help prevent avoidable rehospitalizations
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask
+											id="it" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24"
+										>
+											<rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+										</mask>
+										<g mask="url(#it">
+											<path
+												d="M17.1269 12.75H5V11.25H17.1269L11.4308 5.55383L12.5 4.5L20 12L12.5 19.5L11.4308 18.4461L17.1269 12.75Z"
+												fill="#BF1E2E"
+											/>
+										</g>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="dual-image-text-img">
+							<img src="<?php echo THEME_URI?>/static/img/dual361/it2.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="dual-image-text-item">
+					<div class="dual-image-text-wrapper">
+						<div class="dual-image-text-inner">
+							<h2>
+								Member Engagement 
+							</h2>
+							<div class="dual-image-text-paragraphs">
+								<p>
+									Member Engagement complements our Member Advocacy program by focusing on comprehensive educational activities and outreach. As a vital service area, member engagement fosters employee health through a variety of tools and motivational campaigns designed to maximize your employees’ involvement in their own health management. 
+								</p>
+							</div>
+							<div class="dual-image-text-links">
+								<a href="#" class="link-arrow">
+									Learn more about our Member Engagement program
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask
+											id="it" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24"
+										>
+											<rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+										</mask>
+										<g mask="url(#it">
+											<path
+												d="M17.1269 12.75H5V11.25H17.1269L11.4308 5.55383L12.5 4.5L20 12L12.5 19.5L11.4308 18.4461L17.1269 12.75Z"
+												fill="#BF1E2E"
+											/>
+										</g>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="dual-image-text-img">
+							<img src="<?php echo THEME_URI?>/static/img/dual361/it3.jpg" alt="">
+						</div>
+					</div>				
 				</div>
 			</div>
 		</div>
