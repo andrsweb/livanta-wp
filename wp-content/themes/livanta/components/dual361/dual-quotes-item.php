@@ -19,7 +19,10 @@ $position = $item['position'] ?? '';
 
 <div class="dual-quotes-inner">
 	<?php
-	if( $image ) echo '<div class="dual-quotes-img">', wp_get_attachment_image( $image, 'large' ), '</div>';
+	if( $image )
+		echo '<div class="dual-quotes-img">',
+		wp_get_attachment_image( $image, 'large', false, ['loading' => 'lazy'] ),
+		'</div>';
 	?>
 
 	<div class="dual-quotes-info">

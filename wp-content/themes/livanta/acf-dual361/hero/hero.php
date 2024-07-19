@@ -54,7 +54,6 @@ $button_type = get_sub_field( 'button_type' ) ?: 'blue';
 
 				if( $button ){
 					get_template_part( 'components/dual361/links/link', 'big', array_merge( liv_get_acf_link_data( $button ), [
-						'leading_svg' => 1,
 						'desc'        => $button_desc,
 						'type'        => $button_type
 					] ) );

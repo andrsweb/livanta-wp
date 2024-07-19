@@ -35,7 +35,7 @@ $icons = get_sub_field( 'icons' );
 							<?php
 							if( ! empty( $img ) )
 								echo '<div class="dual-icons-img">',
-								wp_get_attachment_image( $img ),
+								wp_get_attachment_image( $img, 'thumbnail', true, ['loading' => 'lazy'] ),
 								'</div>';
 
 							if( $desc ) echo '<p>', $desc, '</p>';
