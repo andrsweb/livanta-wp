@@ -535,6 +535,58 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_669abd6bea1b1": {
+                    "key": "layout_669abd6bea1b1",
+                    "name": "blog_articles",
+                    "label": "Blog Articles",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_669abd7dea1b3",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_669abd88ea1b4",
+                            "label": "Articles Count",
+                            "name": "articles_count",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 10,
+                            "min": "",
+                            "max": "",
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -560,5 +612,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721402862
+    "modified": 1721417136
 }
