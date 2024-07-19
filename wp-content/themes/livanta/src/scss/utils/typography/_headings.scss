@@ -74,4 +74,15 @@ h6, .h6 {
 			margin-bottom: 40px;
 		}
 	}
+
+	h3 {
+		font-family: $ff;
+		font-weight: $fw-semibold;
+		line-height: 160%;
+		font-size: 20px;
+
+		@media all and (min-width: $lg) {
+			font-size: 24px;
+		}
+	}
 }

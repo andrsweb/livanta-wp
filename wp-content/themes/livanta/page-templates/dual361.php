@@ -20,6 +20,7 @@ wp_enqueue_style( 'dual_icons', THEME_URI . '/static/css/dual_icons/dual_icons.m
 wp_enqueue_style( 'dual_quotes', THEME_URI . '/static/css/dual_quotes/dual_quotes.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'dual_quotes', THEME_URI . '/static/js/dual_quotes/dual_quotes.min.js', ['jquery'], THEME_VERSION, true );
 wp_enqueue_style( 'cta', THEME_URI . '/static/css/cta/cta.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'dual_global_text', THEME_URI . '/static/css/dual_global_text/dual_global_text.min.css', [], THEME_VERSION );
 ?>
 
 <main class="main">
@@ -49,7 +50,7 @@ wp_enqueue_style( 'cta', THEME_URI . '/static/css/cta/cta.min.css', [], THEME_VE
 		}
 	}
 	?>
-
+	<!-- Main page -->
 	<section class="explore">
 		<div class="container">
 			<div class="explore-wrapper">
@@ -539,6 +540,25 @@ wp_enqueue_style( 'cta', THEME_URI . '/static/css/cta/cta.min.css', [], THEME_VE
 				<svg class="cta-bg-img" width="482" height="211" viewBox="0 0 482 211" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M33.769 288.892L0.0996094 255.223L178.066 76.0535L274.265 172.252L399.322 48.3965H336.793V0.297363H481.091V144.595H432.992V82.0659L274.265 240.793L178.066 144.595L33.769 288.892Z" fill="white"/>
 				</svg>
+			</div>
+		</div>
+	</section>
+
+	<!-- Together health -->
+	<section class="dual-global-text"> <!-- Red is default -->
+		<div class="container">
+			<div class="dual-global-text-wrapper">
+				<div class="dual-global-text-img">
+					<img src="<?php echo THEME_URI ?>/static/img/dual361/tactic.svg" alt="">
+				</div>
+				<h3>
+					We’re there – from the break room to the waiting room. 
+				</h3>
+				<div class="dual-global-text-items">
+					<p>
+						DUAL361 gives your employees access to a range of clinical support services to help them get healthy and stay healthy longer. From preventive care to chronic disease management, from the break room to the waiting room, DUAL361 is there when your employees have questions, need guidance, or are in the throes of a healthcare emergency or hospitalization. We support your employees on their healthcare journey and keep them engaged as they return to work. 
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>

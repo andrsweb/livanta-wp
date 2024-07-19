@@ -3,6 +3,7 @@
 .cta {
 	padding: 60px 0;
 	background-color: $N700;
+	overflow: hidden;
 
 	@media(min-width: $lg) {
 		padding: 120px 0;

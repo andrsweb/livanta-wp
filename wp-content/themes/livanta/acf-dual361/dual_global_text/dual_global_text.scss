@@ -1,0 +1,82 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-global-text {
+	padding: 120px 0;
+	background-color: $R800;
+
+	&.blue {
+		background-color: $B800;
+	}
+
+	&-wrapper {
+		width: 100%;
+		max-width: 303px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+		margin: 0 auto;
+
+		@media(min-width: $sm) {
+			max-width: 403px;
+		}
+
+		@media(min-width: $md) {
+			max-width: 503px;
+		}
+
+		@media(min-width: $lg) {
+			gap: 24px;
+			max-width: 694px;
+		}
+
+		h3 {
+			color: $white;
+			text-align: center;
+		}
+
+		.dual-global-text-items {
+			display: flex;
+			flex-direction: column;
+			@include text-gap();
+		}
+
+		p {
+			@include p2-reg();
+			color: $white;
+			text-align: center;
+			
+
+			&:first-of-type {
+				&::before {
+					content: '';
+					display: block;
+					width: 50px;
+					height: 1px;
+					background-color: $white;
+					margin: 0 auto 16px auto;
+
+					@media(min-width: $lg) {
+						width: 70px;
+						margin: 0 auto 24px auto;
+					}
+				}
+			}
+		}
+	}
+
+	&-img {
+		width: 40px;
+		height: 40px;
+
+		@media(min-width: $lg) {
+			width: 60px;
+			height: 60px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
