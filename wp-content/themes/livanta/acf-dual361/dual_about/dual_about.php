@@ -25,7 +25,11 @@ $link            = get_sub_field( 'link' );
 	<div class="container">
 		<div class="dual-about-wrapper">
 			<div class="dual-about-bg">
-				<img src="<?php echo THEME_URI ?> /static/img/dual361/dual-about-bg.svg" alt="">
+				<picture>
+					<source srcset="<?php echo THEME_URI; ?>/static/img/dual361/dual-about-bg-mob.svg" media="(max-width: 768px)" type="image/svg+xml">
+					<source srcset="<?php echo THEME_URI; ?>/static/img/dual361/dual-about-bg.svg" media="(min-width: 769px)" type="image/svg+xml">
+					<img src="<?php echo THEME_URI; ?>/static/img/dual361/dual-about-bg.svg" alt="Background Image">
+				</picture>
 			</div>
 
 			<div class="dual-about-info">
