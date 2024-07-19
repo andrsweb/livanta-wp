@@ -55,7 +55,10 @@
 
 		p {
 			@include p2-reg();
-			color: $N500;
+
+			& {
+				color: $N500
+			}
 		}
 	}
 

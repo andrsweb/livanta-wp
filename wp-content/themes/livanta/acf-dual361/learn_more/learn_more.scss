@@ -18,7 +18,10 @@
 
 	&-subtitle {
 		@include p1-bold();
-		color: $N500;
+
+		& {
+			color: $N500
+		}
 	}
 
 	&-wrapper {

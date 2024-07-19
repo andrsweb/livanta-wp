@@ -43,23 +43,23 @@
 
 		p {
 			@include p2-reg();
-			color: $white;
-			text-align: center;
-			
 
-			&:first-of-type {
-				&::before {
-					content: '';
-					display: block;
-					width: 50px;
-					height: 1px;
-					background-color: $white;
-					margin: 0 auto 16px auto;
+			& {
+				color: $white;
+				text-align: center
+			}
 
-					@media(min-width: $lg) {
-						width: 70px;
-						margin: 0 auto 24px auto;
-					}
+			&:first-of-type::before {
+				content: '';
+				display: block;
+				width: 50px;
+				height: 1px;
+				background-color: $white;
+				margin: 0 auto 16px auto;
+
+				@media(min-width: $lg) {
+					width: 70px;
+					margin: 0 auto 24px auto;
 				}
 			}
 		}
