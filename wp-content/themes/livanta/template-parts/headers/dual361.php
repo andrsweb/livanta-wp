@@ -93,7 +93,6 @@ $header_button = get_field( 'header_button_dual', 'option' );
 						<?php
 					}
 					?>
-
 					<button class="burger-button-dual">
 						<span></span>
 					</button>

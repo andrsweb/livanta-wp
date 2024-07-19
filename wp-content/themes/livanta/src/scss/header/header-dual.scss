@@ -13,8 +13,6 @@
 	}
 
 	&-logo {
-		margin-right: auto;
-
 		img {
 			width: auto;
 			height: 32px;
@@ -36,6 +34,7 @@
 	}
 
 	&-box {
+		margin-left: auto;
 		display: flex;
 		align-items: center;
 		gap: 50px;
@@ -109,6 +108,16 @@
 				width: 100%;
 				display: flex;
 				align-items: center;
+
+				&.blue {
+					.sub-menu-wrapper {
+						.sub-menu {
+							.menu-item:first-child a {
+								color: $B500
+							}
+						}
+					}
+				}
 
 				&-has-children {
 					a {
@@ -192,11 +201,6 @@
 							a {
 								pointer-events: all;
 								@include p3-bold();
-
-								& {
-									color: $N500;
-									cursor: pointer
-								}
 							}
 			
 							&:hover {
@@ -332,6 +336,10 @@
 		&.showed {
 			@media(min-width: $lg) {
 				display: flex;
+
+				.sub-menu-wrapper {
+					display: flex;
+				}
 			}
 		}
 	}
