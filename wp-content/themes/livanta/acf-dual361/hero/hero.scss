@@ -28,7 +28,23 @@
 		}
 	}
 
-	&.blue {
+	&.color {
+		h1 {
+			color: $white;
+		}
+
+		p {
+			color: $white;
+		}
+	}
+
+	&.member {
+		h1 {
+			color: $R500;
+		}
+	}
+
+	&.empower {
 		h1 {
 			color: $B500;
 		}
