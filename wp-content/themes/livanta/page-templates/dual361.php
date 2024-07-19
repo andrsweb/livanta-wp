@@ -230,6 +230,7 @@ wp_enqueue_style( 'cta', THEME_URI . '/static/css/cta/cta.min.css', [], THEME_VE
 							Each core service offers a features designed to optimize the health of your employees and the health of your organization. Contact us today to learn more.
 						</p>
 					<a href="#" class="link-arrow">
+						<span>
 						Learn about DUAL361's state-of-the-art data analytics
 						<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<mask id="a12" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
@@ -238,7 +239,8 @@ wp_enqueue_style( 'cta', THEME_URI . '/static/css/cta/cta.min.css', [], THEME_VE
 							<g mask="url(#a12)">
 								<path d="M17.1269 12.75H5V11.25H17.1269L11.4308 5.55383L12.5 4.5L20 12L12.5 19.5L11.4308 18.4461L17.1269 12.75Z" fill="#BF1E2E"/>
 							</g>
-						</svg>	
+						</svg>
+						</span>
 					</a>
 				</div>
 			</div>
