@@ -11,12 +11,13 @@
 
 wp_enqueue_style( 'cta', THEME_URI . '/static/css/cta/cta.min.css', [], THEME_VERSION );
 
+$type  = get_sub_field( 'type' ) ?: 'red';
 $title = get_sub_field( 'title' );
 $text  = get_sub_field( 'text' );
 $link  = get_sub_field( 'link' );
 ?>
 
-<section class="cta">
+<section class="cta <?php echo esc_attr( $type ) ?>">
 	<div class="container">
 		<div class="cta-wrapper">
 			<?php

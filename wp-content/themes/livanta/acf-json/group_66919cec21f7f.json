@@ -912,6 +912,32 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_669ba4bac69df",
+                            "label": "Type",
+                            "name": "type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "default": "Default",
+                                "red": "Red",
+                                "blue": "Blue"
+                            },
+                            "default_value": "default",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_669ace7085e37",
                             "label": "Title",
                             "name": "title",
@@ -977,6 +1003,31 @@
                     "label": "Global Text",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_669ba1e6fc073",
+                            "label": "Type",
+                            "name": "type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "red": "Red",
+                                "blue": "Blue"
+                            },
+                            "default_value": "red",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
                         {
                             "key": "field_669ad0adef6bd",
                             "label": "Icon",
@@ -1052,6 +1103,31 @@
                     "label": "Image Text",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_669bae78d65d4",
+                            "label": "Type",
+                            "name": "type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "red": "Red",
+                                "blue": "Blue"
+                            },
+                            "default_value": "red",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
                         {
                             "key": "field_669ad2d41cded",
                             "label": "Blocks",
@@ -1364,5 +1440,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721424762
+    "modified": 1721478804
 }

@@ -11,12 +11,13 @@
 
 wp_enqueue_style( 'dual_global_text', THEME_URI . '/static/css/dual_global_text/dual_global_text.min.css', [], THEME_VERSION );
 
+$type  = get_sub_field( 'type' ) ?: 'red';
 $icon  = get_sub_field( 'icon' );
 $title = get_sub_field( 'title' );
 $text  = get_sub_field( 'text' );
 ?>
 
-<section class="dual-global-text"> <!-- Red is default -->
+<section class="dual-global-text <?php echo esc_attr( $type ) ?>">
 	<div class="container">
 		<div class="dual-global-text-wrapper">
 			<?php

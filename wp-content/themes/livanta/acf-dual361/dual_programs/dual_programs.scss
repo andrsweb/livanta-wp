@@ -72,9 +72,12 @@
 
 		p {
 			@include p1-reg();
-			color: $N500;
-			text-align: center;
-			max-width: 204px;
+
+			& {
+				color: $N500;
+				text-align: center;
+				max-width: 204px
+			}
 
 			@media(min-width: $sm) {
 				max-width: 236px;

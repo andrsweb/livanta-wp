@@ -56,7 +56,10 @@
 
 		p {
 			@include p2-reg();
-			color: $N500;
+
+			& {
+				color: $N500
+			}
 		}
 	}
 
@@ -68,7 +71,6 @@
 	}
 
 	&-img {
-		width: 100%;
 		width: 341px;
 		height: 146px;
 		margin-top: 32px;

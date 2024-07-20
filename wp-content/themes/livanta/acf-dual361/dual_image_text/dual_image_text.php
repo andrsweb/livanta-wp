@@ -12,9 +12,11 @@
 wp_enqueue_style( 'dual_image_text', THEME_URI . '/static/css/dual_image_text/dual_image_text.min.css', [], THEME_VERSION );
 
 if( ! $blocks = get_sub_field( 'blocks' ) ) return;
+
+$type = get_sub_field( 'type' ) ?: 'red';
 ?>
 
-<section class="dual-image-text">
+<section class="dual-image-text <?php echo esc_attr( $type ) ?>">
 	<div class="container">
 		<div class="dual-image-text-items">
 			<?php
