@@ -47,7 +47,7 @@ $link  = get_sub_field( 'link' );
 			if( $link )
 				get_template_part( 'components/dual361/links/link', 'arrow', liv_get_acf_link_data( $link ) );
 			?>
-		</div>
-	</div>
+		</div><!-- .dual-programs-wrapper -->
+	</div><!-- .container -->
 </section>
 
