@@ -1,0 +1,59 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-columns {
+	padding: 60px 0;
+
+	@media(min-width: $lg) {
+		padding: 60px 0 120px;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&-items {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		gap: 44px;
+
+		@media(min-width: $lg) {
+			gap: 60px;
+		}
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		width: 100%;
+		padding: 28px;
+		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.04);
+		background-color: $white;
+
+		@media(min-width: $md) {
+			width: calc(50% - 22px);
+		}
+
+		@media(min-width: $lg) {
+			width: calc(50% - 30px);
+			padding: 36px 36px 10px 36px;
+		}
+
+		p {
+			color: $N900;
+			@include p2-reg();
+		}
+	}
+
+	.link-arrow {
+		margin-top: 20px;
+
+		@media(min-width: $lg) {
+			margin-top: 60px;
+		}
+	}
+}
