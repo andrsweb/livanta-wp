@@ -11,9 +11,10 @@ $id     = 'mask-' . mt_rand( 10000, 99999 ) . '-' . mt_rand( 10000, 99999 );
 $title  = $args['title'] ?? '';
 $url    = $args['url'] ?? '#';
 $target = $args['target'] ?? '';
+$type   = $args['type'] ?? 'red';
 ?>
 
-<a href="<?php echo esc_url( $url ) ?>" class="link-arrow"<?php echo $target ?>>
+<a href="<?php echo esc_url( $url ) ?>" class="link-arrow <?php echo esc_attr( $type ) ?>"<?php echo $target ?>>
 	<span>
 		<?php if( $title ) echo esc_html( $title ) ?>
 		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
