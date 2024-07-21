@@ -47,6 +47,14 @@
 			color: $N900;
 			@include p2-reg();
 		}
+
+		a {
+			margin-top: 4px;
+
+			@media(min-width: $lg) {
+				margin-top: 20px;
+			}
+		}
 	}
 
 	.link-arrow {
