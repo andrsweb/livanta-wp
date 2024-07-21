@@ -2,6 +2,7 @@
 
 .dual-desc {
 	padding-top: 60px;
+	overflow: hidden;
 
 	@media(min-width: $xl) {
 		padding-top: 120px;
