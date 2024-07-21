@@ -13,11 +13,177 @@ wp_enqueue_style( 'dual_contact', THEME_URI . '/static/css/dual_contact/dual_con
 wp_enqueue_style( 'dual_items', THEME_URI . '/static/css/dual_items/dual_items.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'dual_dropdowns', THEME_URI . '/static/css/dual_dropdowns/dual_dropdowns.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'dual_dropdowns', THEME_URI . '/static/js/dual_dropdowns/dual_dropdowns.min.js', ['jquery'], THEME_VERSION, true );
+wp_enqueue_style( 'dual_cases', THEME_URI . '/static/css/dual_cases/dual_cases.min.css', [], THEME_VERSION );
 // wp_enqueue_style( 'dual_programs', THEME_URI . '/static/css/dual_programs/dual_programs.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'blog_articles', THEME_URI . '/static/js/blog_articles/blog_articles.min.js', ['jquery'], THEME_VERSION, true ); Не удаляй 2 строки, для примера будут.
 ?>
 
 <main class="main">
+	<section class="dual-cases empower"> <!-- Дефолтный красный для стрелок, емпавер класс - синие стрелки -->
+		<div class="container">
+			<div class="dual-cases-wrapper">
+				<h2>
+					Need more reasons to choose us?
+				</h2>
+				<div class="dual-cases-items">
+					<div class="dual-cases-item">
+						<div class="dual-cases-item-top">
+							<div class="dual-cases-item-img">
+								<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+										<rect width="28" height="28" fill="#D9D9D9"/>
+									</mask>
+									<g mask="url(#22)">
+										<path d="M17.3106 21.7747L16.0631 20.5564L21.7553 14.8643H2.91797V13.1146H21.7663L16.0923 7.42239L17.3106 6.2041L25.0957 13.9896L17.3106 21.7747Z" fill="#BF1E2E"/>
+									</g>
+								</svg> <!-- Рандомчик нужен для айдишников, так как стрелки могут синие и красные -->
+							</div>
+							<div class="dual-cases-item-title">
+								We provide a comprehensive overview of your workforce’s health. 
+							</div>
+						</div>
+						<div class="dual-cases-item-bottom">
+							<p>
+								Analytics provide detailed insights into health trends and risks, crucial for proactive health management.
+							</p>
+						</div>
+					</div>
+					<div class="dual-cases-item">
+						<div class="dual-cases-item-top">
+							<div class="dual-cases-item-img">
+								<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+										<rect width="28" height="28" fill="#D9D9D9"/>
+									</mask>
+									<g mask="url(#22)">
+										<path d="M17.3106 21.7747L16.0631 20.5564L21.7553 14.8643H2.91797V13.1146H21.7663L16.0923 7.42239L17.3106 6.2041L25.0957 13.9896L17.3106 21.7747Z" fill="#BF1E2E"/>
+									</g>
+								</svg> <!-- Рандомчик нужен для айдишников, так как стрелки могут синие и красные -->
+							</div>
+							<div class="dual-cases-item-title">
+								We enable preventive strategies.
+							</div>
+						</div>
+						<div class="dual-cases-item-bottom">
+							<p>
+								Data-driven insights enable the development of tailored wellness programs and early intervention strategies to mitigate long-term healthcare costs.
+							</p>
+						</div>
+					</div>
+					<div class="dual-cases-item">
+						<div class="dual-cases-item-top">
+							<div class="dual-cases-item-img">
+								<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+										<rect width="28" height="28" fill="#D9D9D9"/>
+									</mask>
+									<g mask="url(#22)">
+										<path d="M17.3106 21.7747L16.0631 20.5564L21.7553 14.8643H2.91797V13.1146H21.7663L16.0923 7.42239L17.3106 6.2041L25.0957 13.9896L17.3106 21.7747Z" fill="#BF1E2E"/>
+									</g>
+								</svg> <!-- Рандомчик нужен для айдишников, так как стрелки могут синие и красные -->
+							</div>
+							<div class="dual-cases-item-title">
+								We help you manage your healthcare program costs. 
+							</div>
+						</div>
+						<div class="dual-cases-item-bottom">
+							<p>
+								Through the analysis of healthcare utilization patterns, employers can negotiate better rates with providers and design cost-effective coverage policies. 
+							</p>
+						</div>
+					</div>
+					<div class="dual-cases-item">
+						<div class="dual-cases-item-top">
+							<div class="dual-cases-item-img">
+								<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+										<rect width="28" height="28" fill="#D9D9D9"/>
+									</mask>
+									<g mask="url(#22)">
+										<path d="M17.3106 21.7747L16.0631 20.5564L21.7553 14.8643H2.91797V13.1146H21.7663L16.0923 7.42239L17.3106 6.2041L25.0957 13.9896L17.3106 21.7747Z" fill="#BF1E2E"/>
+									</g>
+								</svg> <!-- Рандомчик нужен для айдишников, так как стрелки могут синие и красные -->
+							</div>
+							<div class="dual-cases-item-title">
+								We help you customize your employee benefits.
+							</div>
+						</div>
+						<div class="dual-cases-item-bottom">
+							<p>
+								Deep insights into the specific needs and preferences of employees allow for the creation of personalized healthcare benefits, enhancing satisfaction and outcomes.
+							</p>
+						</div>
+					</div>
+					<div class="dual-cases-item">
+						<div class="dual-cases-item-top">
+							<div class="dual-cases-item-img">
+								<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+										<rect width="28" height="28" fill="#D9D9D9"/>
+									</mask>
+									<g mask="url(#22)">
+										<path d="M17.3106 21.7747L16.0631 20.5564L21.7553 14.8643H2.91797V13.1146H21.7663L16.0923 7.42239L17.3106 6.2041L25.0957 13.9896L17.3106 21.7747Z" fill="#BF1E2E"/>
+									</g>
+								</svg> <!-- Рандомчик нужен для айдишников, так как стрелки могут синие и красные -->
+							</div>
+							<div class="dual-cases-item-title">
+								We support your regulatory compliance needs.
+							</div>
+						</div>
+						<div class="dual-cases-item-bottom">
+							<p>
+								Analytics support compliance with health regulations and streamline management processes.
+							</p>
+						</div>
+					</div>
+					<div class="dual-cases-item">
+						<div class="dual-cases-item-top">
+							<div class="dual-cases-item-img">
+								<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+										<rect width="28" height="28" fill="#D9D9D9"/>
+									</mask>
+									<g mask="url(#22)">
+										<path d="M17.3106 21.7747L16.0631 20.5564L21.7553 14.8643H2.91797V13.1146H21.7663L16.0923 7.42239L17.3106 6.2041L25.0957 13.9896L17.3106 21.7747Z" fill="#BF1E2E"/>
+									</g>
+								</svg> <!-- Рандомчик нужен для айдишников, так как стрелки могут синие и красные -->
+							</div>
+							<div class="dual-cases-item-title">
+								We assist with your strategic planning.
+							</div>
+						</div>
+						<div class="dual-cases-item-bottom">
+							<p>
+								Data-driven insights aid in strategic planning, helping align services with member needs. 
+							</p>
+						</div>
+					</div>
+					<div class="dual-cases-item">
+						<div class="dual-cases-item-top">
+							<div class="dual-cases-item-img">
+								<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+										<rect width="28" height="28" fill="#D9D9D9"/>
+									</mask>
+									<g mask="url(#22)">
+										<path d="M17.3106 21.7747L16.0631 20.5564L21.7553 14.8643H2.91797V13.1146H21.7663L16.0923 7.42239L17.3106 6.2041L25.0957 13.9896L17.3106 21.7747Z" fill="#BF1E2E"/>
+									</g>
+								</svg> <!-- Рандомчик нужен для айдишников, так как стрелки могут синие и красные -->
+							</div>
+							<div class="dual-cases-item-title">
+								We offer essential insights. 
+							</div>
+						</div>
+						<div class="dual-cases-item-bottom">
+							<p>
+								Overall, the analytics offer vital information for comprehensive health management, strategic decision-making, and cost control in self-funded plans. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="dual-dropdowns">
 		<div class="container">
 			<div class="dual-dropdowns-wrapper">

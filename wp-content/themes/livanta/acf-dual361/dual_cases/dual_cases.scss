@@ -1,0 +1,112 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-cases {
+	padding: 60px 0;
+
+	@media(min-width: $xl) {
+		padding: 120px 0;
+	}
+
+	&.empower {
+		.dual-cases-item-img {
+			svg path {
+				fill: $B500;
+			}
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2 {
+			text-align: center;
+			margin-bottom: 32px;
+			max-width: 295px;
+
+			@media(min-width: $sm) {
+				max-width: 395px;
+			}
+
+			@media(min-width: $md) {
+				margin-bottom: 60px;
+				max-width: 650px;
+			}
+		}
+	}
+
+	&-items {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 770px;
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 6px;
+		padding: 16px 0;
+		border-bottom: 1px solid $N300;
+
+		@media(min-width: $lg) {
+			padding: 24px 0;
+			gap: 8px;
+		}
+
+		&:first-child {
+			border-top: 1px solid $N300;
+		}
+
+
+		&-top {
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			gap: 6px;
+
+			@media(min-width: $lg) {
+				gap: 8px;
+			}
+		}
+
+		&-bottom {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			@include text-gap();
+
+			p {
+				color: $N500;
+				@include p2-reg();
+			}
+		}
+
+		&-img {
+			width: 26px;
+			height: 26px;
+
+			@media(min-width: $lg) {
+				width: 28px;
+				height: 28px;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&-title {
+			width: calc(100% - 32px);
+			color: $N900;
+			@include p1-bold();
+
+			@media(min-width: $lg) {
+				width: calc(100% - 36px);
+			}
+		}
+	}
+}
