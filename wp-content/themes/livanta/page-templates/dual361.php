@@ -11,11 +11,228 @@ get_header();
 wp_enqueue_style( 'dual_columns', THEME_URI . '/static/css/dual_columns/dual_columns.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'dual_contact', THEME_URI . '/static/css/dual_contact/dual_contact.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'dual_items', THEME_URI . '/static/css/dual_items/dual_items.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'dual_dropdowns', THEME_URI . '/static/css/dual_dropdowns/dual_dropdowns.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'dual_dropdowns', THEME_URI . '/static/js/dual_dropdowns/dual_dropdowns.min.js', ['jquery'], THEME_VERSION, true );
 // wp_enqueue_style( 'dual_programs', THEME_URI . '/static/css/dual_programs/dual_programs.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'blog_articles', THEME_URI . '/static/js/blog_articles/blog_articles.min.js', ['jquery'], THEME_VERSION, true ); Не удаляй 2 строки, для примера будут.
 ?>
 
 <main class="main">
+	<section class="dual-dropdowns">
+		<div class="container">
+			<div class="dual-dropdowns-wrapper">
+				<div class="dual-dropdowns-top">
+					<div class="dual-dropdowns-info">
+						<h2>
+							Why Choose DUAL361
+						</h2>
+						<div class="dual-dropdowns-text">
+							<p>
+								Are you a self-funded employers looking for a solution that balances cost management with employee health and well-being? You value innovative approaches that offer comprehensive healthcare solutions and detailed data analytics. 
+							</p>
+							<p>
+								DUAL361 is designed to meet these needs by integrating advanced patient analytics, efficient billing and coding reviews, and proactive healthcare management strategies. Our solution ensures that you can control healthcare expenses while enhancing the quality of care provided to your employees. 
+							</p>
+						</div>
+					</div>
+					<div class="dual-dropdowns-img">
+						<img src="<?php echo THEME_URI ?>/static/img/dual361/dd1.jpg" alt="">
+					</div>
+				</div>
+				<div class="dual-dropdowns-bottom">
+					<div class="dual-dropdown">
+						<button class="dual-dropdown-button">
+							<span class="dual-dropdown-button-text">
+								Cost Management
+							</span>
+							<span class="dual-dropdown-button-ico"></span>
+						</button>
+						<div class="dual-dropdown-open">
+							<div class="dual-dropdown-inner">
+								<div class="dual-dropdown-inner-left">
+									<p>
+										By offering a solution that helps employees navigate the healthcare system more effectively and receive the care they need promptly, you can significantly improve employee satisfaction and brand loyalty. 
+									</p>
+								</div>
+								<div class="dual-dropdown-inner-right">
+									<div class="dual-dropdown-img">
+										<img src="<?php echo THEME_URI ?>/static/img/dual361/big-arr.svg" alt="">
+									</div>
+									<div class="dual-dropdown-texts">
+										<p>
+											This enhanced satisfaction is crucial for employee retention and attracting new talent, making your organization more competitive in the job market. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dual-dropdown">
+						<button class="dual-dropdown-button">
+							<span class="dual-dropdown-button-text">
+								Customization and Flexibility
+							</span>
+							<span class="dual-dropdown-button-ico"></span>
+						</button>
+						<div class="dual-dropdown-open">
+							<div class="dual-dropdown-inner">
+								<div class="dual-dropdown-inner-left">
+									<p>
+										By offering a solution that helps employees navigate the healthcare system more effectively and receive the care they need promptly, you can significantly improve employee satisfaction and brand loyalty. 
+									</p>
+								</div>
+								<div class="dual-dropdown-inner-right">
+									<div class="dual-dropdown-img">
+										<img src="<?php echo THEME_URI ?>/static/img/dual361/big-arr.svg" alt="">
+									</div>
+									<div class="dual-dropdown-texts">
+										<p>
+											This enhanced satisfaction is crucial for employee retention and attracting new talent, making your organization more competitive in the job market. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dual-dropdown">
+						<button class="dual-dropdown-button">
+							<span class="dual-dropdown-button-text">
+								Data-Driven Decision Making
+							</span>
+							<span class="dual-dropdown-button-ico"></span>
+						</button>
+						<div class="dual-dropdown-open">
+							<div class="dual-dropdown-inner">
+								<div class="dual-dropdown-inner-left">
+									<p>
+										By offering a solution that helps employees navigate the healthcare system more effectively and receive the care they need promptly, you can significantly improve employee satisfaction and brand loyalty. 
+									</p>
+								</div>
+								<div class="dual-dropdown-inner-right">
+									<div class="dual-dropdown-img">
+										<img src="<?php echo THEME_URI ?>/static/img/dual361/big-arr.svg" alt="">
+									</div>
+									<div class="dual-dropdown-texts">
+										<p>
+											This enhanced satisfaction is crucial for employee retention and attracting new talent, making your organization more competitive in the job market. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dual-dropdown">
+						<button class="dual-dropdown-button">
+							<span class="dual-dropdown-button-text">
+								Enhanced Employee Satisfaction
+							</span>
+							<span class="dual-dropdown-button-ico"></span>
+						</button>
+						<div class="dual-dropdown-open">
+							<div class="dual-dropdown-inner">
+								<div class="dual-dropdown-inner-left">
+									<p>
+										By offering a solution that helps employees navigate the healthcare system more effectively and receive the care they need promptly, you can significantly improve employee satisfaction and brand loyalty. 
+									</p>
+								</div>
+								<div class="dual-dropdown-inner-right">
+									<div class="dual-dropdown-img">
+										<img src="<?php echo THEME_URI ?>/static/img/dual361/big-arr.svg" alt="">
+									</div>
+									<div class="dual-dropdown-texts">
+										<p>
+											This enhanced satisfaction is crucial for employee retention and attracting new talent, making your organization more competitive in the job market. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dual-dropdown">
+						<button class="dual-dropdown-button">
+							<span class="dual-dropdown-button-text">
+								Improved Employee Health Outcomes
+							</span>
+							<span class="dual-dropdown-button-ico"></span>
+						</button>
+						<div class="dual-dropdown-open">
+							<div class="dual-dropdown-inner">
+								<div class="dual-dropdown-inner-left">
+									<p>
+										By offering a solution that helps employees navigate the healthcare system more effectively and receive the care they need promptly, you can significantly improve employee satisfaction and brand loyalty. 
+									</p>
+								</div>
+								<div class="dual-dropdown-inner-right">
+									<div class="dual-dropdown-img">
+										<img src="<?php echo THEME_URI ?>/static/img/dual361/big-arr.svg" alt="">
+									</div>
+									<div class="dual-dropdown-texts">
+										<p>
+											This enhanced satisfaction is crucial for employee retention and attracting new talent, making your organization more competitive in the job market. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dual-dropdown">
+						<button class="dual-dropdown-button">
+							<span class="dual-dropdown-button-text">
+								Regulatory Compliance and Reporting
+							</span>
+							<span class="dual-dropdown-button-ico"></span>
+						</button>
+						<div class="dual-dropdown-open">
+							<div class="dual-dropdown-inner">
+								<div class="dual-dropdown-inner-left">
+									<p>
+										By offering a solution that helps employees navigate the healthcare system more effectively and receive the care they need promptly, you can significantly improve employee satisfaction and brand loyalty. 
+									</p>
+								</div>
+								<div class="dual-dropdown-inner-right">
+									<div class="dual-dropdown-img">
+										<img src="<?php echo THEME_URI ?>/static/img/dual361/big-arr.svg" alt="">
+									</div>
+									<div class="dual-dropdown-texts">
+										<p>
+											This enhanced satisfaction is crucial for employee retention and attracting new talent, making your organization more competitive in the job market. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dual-dropdown">
+						<button class="dual-dropdown-button">
+							<span class="dual-dropdown-button-text">
+								Risk Management
+							</span>
+							<span class="dual-dropdown-button-ico"></span>
+						</button>
+						<div class="dual-dropdown-open">
+							<div class="dual-dropdown-inner">
+								<div class="dual-dropdown-inner-left">
+									<p>
+										By offering a solution that helps employees navigate the healthcare system more effectively and receive the care they need promptly, you can significantly improve employee satisfaction and brand loyalty. 
+									</p>
+								</div>
+								<div class="dual-dropdown-inner-right">
+									<div class="dual-dropdown-img">
+										<img src="<?php echo THEME_URI ?>/static/img/dual361/big-arr.svg" alt="">
+									</div>
+									<div class="dual-dropdown-texts">
+										<p>
+											This enhanced satisfaction is crucial for employee retention and attracting new talent, making your organization more competitive in the job market. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="dual-items">
 		<div class="container">
 			<div class="dual-items-wrapper">

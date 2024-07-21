@@ -1,0 +1,295 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-dropdowns {
+	padding: 60px 0;
+	position: relative;
+	margin-top: 200px;
+
+	@media(min-width: $xl) {
+		padding: 0 0 60px
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&-top {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 60px;
+
+		@media(min-width: $xl) {
+			flex-direction: row;
+			align-items: center;
+			gap: 100px;
+		}
+	}
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		max-width: 100%;
+
+		@media(min-width: $xl) {
+			max-width: 640px;
+			padding: 120px 0 80px;
+		}
+
+		h2 {
+			margin-bottom: 12px;
+
+			@media(min-width: $lg) {
+				margin-bottom: 24px;
+			}
+		}
+
+		.dual-dropdowns-text {
+			display: flex;
+			flex-direction: column;
+			@include text-gap();
+
+			p {
+				color: $N900;
+				@include p2-reg();
+			}
+		}
+	}
+
+	&-img {
+		width: 100vw;
+		height: 370px;
+		position: relative;
+		margin-left: calc(50% - 50vw);
+
+		@media(min-width: $xl) {
+			width: 42.7vw;
+			height: auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: -1;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 200vw;
+			min-height: 434px;
+			background-color: $N100;
+			position: absolute;
+			left: 0;
+			top: 0;
+			margin-left: -100vw;
+			z-index: -1;
+
+			@media(min-width: $xl) {
+				min-height: 640px;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 434px;
+			object-fit: cover;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+
+			@media(min-width: $xl) {
+				width: 100%;
+				height: 640px;
+			}
+		}
+	}
+
+	&-bottom {
+		width: 100%;
+		background-color: $white;
+		padding: 16px;
+		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.04);
+
+		@media(min-width: $lg) {
+			padding: 48px;
+		}
+	}
+
+	.dual-dropdown {
+		padding: 16px 0;
+		border-bottom: 1px solid $N200;
+
+		@media(min-width: $lg) {
+			padding: 31px 0;
+		}
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		&-button {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0;
+
+			&-text {
+				width: 80%;
+				color: $N500;
+				font-family: $ff;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: $fw-semibold;
+				line-height: 160%;
+				transition: color ease $tr;
+				text-align: left;
+
+				@media(min-width: $lg) {
+					font-size: 24px;
+				}
+			}
+
+			&-ico {
+				display: block;
+				width: 12px;
+				height: 12px;
+				position: relative;
+
+				@media(min-width: $lg) {
+					width: 20px;
+					height: 20px;
+				}
+
+				&::before, &::after {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: $R500;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					border-radius: 4px;
+					transition: opacity ease $tr;
+				}
+
+				&::after {
+					transform: translateY(-50%) rotate(90deg);
+				}
+			}
+		}
+
+		&-open {
+			height: 0;
+			overflow: hidden;
+			transition: height ease $tr, margin ease $tr;
+		}
+
+		&-inner {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			@media(min-width: $lg) {
+				flex-direction: row;
+				gap: 68px;
+				padding-bottom: 24px;
+			}
+
+			&-left {
+				width: 100%;
+				max-width: 100%;
+
+				@media(min-width: $lg) {
+					max-width: 360px;
+				}
+
+				p {
+					color: $N900;
+					@include p2-bold();
+				}
+			}
+
+			&-right {
+				width: 100%;
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+
+				@media(min-width: $lg) {
+					width: calc(100% - 428px);
+					gap: 24px;
+				}
+
+				.dual-dropdown-img {
+					width: 24px;
+					height: 100%;
+
+					@media(min-width: $lg) {
+						width: 40px;
+					}
+
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+
+				.dual-dropdown-texts {
+					width: calc(100% - 34px);
+					display: flex;
+					flex-direction: column;
+
+					@media(min-width: $lg) {
+						width: calc(100% - 64px);	
+					}
+
+					@include text-gap;
+
+					
+
+					p {
+						font-family: $ff;
+						color: $N500;
+						font-size: 24px;
+						font-style: normal;
+						font-weight: $fw-medium;
+						line-height: 160%;
+					}
+				}
+			}
+		}
+
+		&.opened {
+			.dual-dropdown-button-text {
+				color: $R500;
+			}
+
+			.dual-dropdown-open {
+				margin-top: 24px;
+
+				@media(min-width: $lg) {
+					margin-top: 40px;
+				}
+			}
+
+			.dual-dropdown-button-ico {
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}
