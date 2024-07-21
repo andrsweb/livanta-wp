@@ -24,7 +24,7 @@ if( ! $img_desktop ) return;
 			'data' => crit_prepare_image_data( $img_desktop, 'full', [
 				'is_lazy'     => 1,
 				'mobile'      => $img_mobile,
-				'mobile_size' => 'blocks-mobile'
+				'mobile_size' => 'full'
 			] )
 		] );
 		?>
