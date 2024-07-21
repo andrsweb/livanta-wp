@@ -1791,6 +1791,66 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_669cfd000570e": {
+                    "key": "layout_669cfd000570e",
+                    "name": "dual_full_img",
+                    "label": "Full-Width Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_669cfd1a05710",
+                            "label": "Image Desktop",
+                            "name": "image_desktop",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_669cfd5305711",
+                            "label": "Image Mobile",
+                            "name": "image_mobile",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -1816,5 +1876,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721563581
+    "modified": 1721564514
 }
