@@ -10,11 +10,58 @@
 get_header();
 wp_enqueue_style( 'dual_columns', THEME_URI . '/static/css/dual_columns/dual_columns.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'dual_contact', THEME_URI . '/static/css/dual_contact/dual_contact.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'dual_items', THEME_URI . '/static/css/dual_items/dual_items.min.css', [], THEME_VERSION );
 // wp_enqueue_style( 'dual_programs', THEME_URI . '/static/css/dual_programs/dual_programs.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'blog_articles', THEME_URI . '/static/js/blog_articles/blog_articles.min.js', ['jquery'], THEME_VERSION, true ); Не удаляй 2 строки, для примера будут.
 ?>
 
 <main class="main">
+	<section class="dual-items">
+		<div class="container">
+			<div class="dual-items-wrapper">
+				<div class="dual-items-bg">
+					<picture>
+						<source srcset="<?php echo THEME_URI; ?>/static/img/dual361/dual-about-bg-mob.svg" media="(max-width: 768px)" type="image/svg+xml">
+						<source srcset="<?php echo THEME_URI; ?>/static/img/dual361/dual-about-bg.svg" media="(min-width: 769px)" type="image/svg+xml">
+						<img src="<?php echo THEME_URI; ?>/static/img/dual361/dual-about-bg.svg" alt="Background Image">
+					</picture>
+				</div>
+
+				<div class="dual-items-box">
+					<div class="dual-item">
+						<h2>
+							Livanta’s DUAL361 Solution 
+						</h2>
+						<div class="dual-item-texts">
+							<p>
+								Livanta’s DUAL361 provides a tailored solution of healthcare programs for self-funded employers, adeptly balancing the management of healthcare costs with the vital goal of improving employee health and well-being. Leveraging extensive experience gained from decades servicing the Medicare program, Livanta brings a nuanced understanding of patient advocacy, optimizing healthcare outcomes, and streamlining healthcare utilization. 
+							</p>
+						</div>
+					</div>
+					<div class="dual-item">
+						<h2>
+							Cutting Edge. Holistic. Innovative. 
+						</h2>
+						<div class="dual-item-texts">
+							<p>
+								Livanta’s DUAL361 solution, which derives its name from a dual focus on both employer and employee needs, encapsulates comprehensive 361-degree data integration. With cutting-edge analytics, a holistic view of healthcare management, and technological innovation, we empower employees with the resources and guidance they need for effective healthcare navigation and that healthcare services are timely, appropriate, and optimally delivered. 
+							</p>
+						</div>
+					</div>
+					<div class="dual-item">
+						<h2>
+							Boosting Your Employees’ Health and Boosting Your Bottom Line 
+						</h2>
+						<div class="dual-item-texts">
+							<p>
+								By aligning the health needs of employees with the financial objectives of employers, we bridge the gap between employer financial goals and employee health needs, DUAL361 creates a synergistic approach that promotes both fiscal responsibility and improved health outcomes. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="dual-columns">
 		<div class="container">
 			<div class="dual-columns-wrapper">

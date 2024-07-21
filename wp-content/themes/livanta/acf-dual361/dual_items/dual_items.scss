@@ -1,0 +1,96 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-items {
+	padding: 60px 0;
+
+	@media(min-width: $xl) {
+		padding: 120px 0;
+	}
+
+	&-wrapper {
+		position: relative;
+		padding-top: 90px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	
+		@media(min-width: $md) {
+			padding-top: 172px;
+		}
+	}
+
+	&-bg {
+		width: 100%;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		z-index: -1;
+	
+		img {
+			margin: 0 auto;
+		}
+	}
+
+	&-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+
+		@media(min-width: $md) {
+			gap: 60px;
+		}
+	}
+
+	.dual-item {
+		width: 100%;
+		max-width: 660px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 120px;
+			height: 1px;
+			background-color: $N300;
+			margin-top: 40px;
+
+			@media(min-width: $md) {
+				margin-top: 60px;
+			}
+		}
+
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+
+		h2 {
+			text-align: center;
+			max-width: 240px;
+
+			@media(min-width: $md) {
+				max-width: 100%;
+			}
+		}
+
+		&-texts {
+			display: flex;
+			flex-direction: column;
+			@include text-gap();
+
+			p {
+				color: $N500;
+				text-align: center;
+				@include p2-reg();
+			}
+		}
+
+		
+	}
+
+}
