@@ -9,12 +9,13 @@
 
 get_header();
 wp_enqueue_style( 'dual_columns', THEME_URI . '/static/css/dual_columns/dual_columns.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'dual_contact', THEME_URI . '/static/css/dual_contact/dual_contact.min.css', [], THEME_VERSION );
 // wp_enqueue_style( 'dual_programs', THEME_URI . '/static/css/dual_programs/dual_programs.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'blog_articles', THEME_URI . '/static/js/blog_articles/blog_articles.min.js', ['jquery'], THEME_VERSION, true ); Не удаляй 2 строки, для примера будут.
 ?>
 
 <main class="main">
-<section class="dual-columns">
+	<section class="dual-columns">
 		<div class="container">
 			<div class="dual-columns-wrapper">
 				<div class="dual-columns-items">
@@ -52,6 +53,40 @@ wp_enqueue_style( 'dual_columns', THEME_URI . '/static/css/dual_columns/dual_col
 			</div>
 		</div>
 	</section>
+	<section class="dual-contact">
+		<div class="container">
+			<div class="dual-contact-wrapper">
+				<div class="dual-contact-info">
+					<div class="dual-contact-text">
+						<p>
+							The team at DUAL361 team also has unparalleled experience in identifying billing and claims errors, as well as a world-class and award-winning marketing and communications and member services support. 
+						</p>
+						<p>
+							Employing over 500 staff members, including doctors, nurses, and allied clinical personnel, we boast a workforce that is well-versed in the healthcare needs of individuals and families. With a comprehensive understanding of healthcare dynamics and patient needs, we continue to advance our mission of improving the quality and efficiency of medical care across the nation. 
+						</p>
+						<p>
+							E-mail us today at <a href="mailto:dual361@livanta.com">dual361@livanta.com</a> or complete the form to have one of our team members contact you. 
+						</p>
+					</div>
+				</div>
+				<div class="dual-contact-form">
+					<?php echo do_shortcode( '[contact-form-7 id="f509452" title="Dual contact form"]' ); ?>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- CF7 CODE
+	<legend>Send us a message</legend>
+	<label>Full name [text* full-name placeholder "Full name"]</label>
+	<label>Mobile phone [tel* phone placeholder "Mobile phone"]</label>
+	<label>Email address [email* email placeholder "Email address"]</label>
+	<label>Your message [textarea* message placeholder "Your message"]</label>
+	<div class="dual-required">*This contact form should be used for administrative contact only. Please do not include any identifiable health information in your message.</div>
+	<button class="button wpcf7-form-control wpcf7-submit dual-submit" type="submit">
+	<span>Start the conversation</span>
+	</button>
+-->
+
 	<?php
 	/**
 	 * 1. Please create ACF Flexible Content setting

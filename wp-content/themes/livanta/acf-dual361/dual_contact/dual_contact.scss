@@ -1,0 +1,198 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-contact {
+	padding: 60px 0;
+
+	@media(min-width: $lg) {
+		padding: 120px 0;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 52px;
+
+		@media(min-width: $xl) {
+			flex-direction: row;
+			gap: 60px;
+		}
+	}
+
+	&-info {
+		width: 100%;
+
+		@media(min-width: $xl) {
+			max-width: 516px;
+		}
+	}
+
+	&-text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@include text-gap();
+		
+		p {
+			color: $N900;
+			@include p2-reg();
+
+			a {
+				color: $R500;
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	&-form {
+		width: 100%;
+		padding: 20px;
+		background-color: $white;
+		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.04);
+
+		@media(min-width: $xl) {
+			width: calc(100% - 566px);
+			padding: 36px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+
+			@media(min-width: $xl) {
+				gap: 28px;
+			}
+		}
+
+		legend {
+			color: $N900;
+			font-family: $ff;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: $fw-semibold;
+			line-height: 160%;
+			margin-bottom: 12px;
+		}
+
+		label {
+			display: flex;
+			flex-direction: column;
+			color: $N900;
+			@include p1-reg();
+
+			input {
+				width: 100%;
+				padding: 12px;
+				border: 1px solid $N200;
+				color: $N900;
+				font-family: $ff;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: $fw-medium;
+				line-height: 160%;
+				margin-top: 12px;
+
+				@media(min-width: $md) {
+					font-size: 18px;
+					padding: 16px;
+				}
+
+				&:focus {
+					border-color: $N500;
+				}
+
+				&::placeholder {
+					color: $N300;
+					font-family: $ff;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: $fw-medium;
+					line-height: 160%;
+
+					@media(min-width: $md) {
+						font-size: 18px;
+					}
+				}
+			}
+
+			textarea {
+				resize: none;
+				width: 100%;
+				height: 96px;
+				padding: 12px;
+				border: 1px solid $N200;
+				color: $N900;
+				font-family: $ff;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: $fw-medium;
+				line-height: 160%;
+				margin-top: 12px;
+
+				@media(min-width: $md) {
+					font-size: 18px;
+					padding: 16px;
+					height: 156px;
+				}
+
+				&::placeholder {
+					color: $N300;
+					font-family: $ff;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: $fw-medium;
+					line-height: 160%;
+					opacity: 1;
+
+					@media(min-width: $md) {
+						font-size: 18px;
+					}
+				}
+
+				&:focus {
+					border-color: $N500;
+				}
+			}
+		}
+
+		.dual-required {
+			background-color: $N100;
+			padding: 12px;
+			color: $N900;
+			@include p3-reg();
+		}
+	}
+
+	.dual-submit {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		text-transform: none;
+		@include p2-bold();
+		
+		&:before, &::after {
+			content: '';
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+
+		&::before {
+			width: 46px;
+			height: 24px;
+			background-image: url('http://livanta.test/wp-content/uploads/2024/07/orbit.svg');
+		}
+
+		&::after {
+			width: 24px;
+			height: 24px;
+			background-image: url('http://livanta.test/wp-content/uploads/2024/07/arrow-forward.svg');
+		}
+	}
+}
