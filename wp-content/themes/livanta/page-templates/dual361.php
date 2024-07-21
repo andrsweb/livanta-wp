@@ -14,11 +14,21 @@ wp_enqueue_style( 'dual_items', THEME_URI . '/static/css/dual_items/dual_items.m
 wp_enqueue_style( 'dual_dropdowns', THEME_URI . '/static/css/dual_dropdowns/dual_dropdowns.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'dual_dropdowns', THEME_URI . '/static/js/dual_dropdowns/dual_dropdowns.min.js', ['jquery'], THEME_VERSION, true );
 wp_enqueue_style( 'dual_cases', THEME_URI . '/static/css/dual_cases/dual_cases.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'dual_full_img', THEME_URI . '/static/css/dual_full_img/dual_full_img.min.css', [], THEME_VERSION );
 // wp_enqueue_style( 'dual_programs', THEME_URI . '/static/css/dual_programs/dual_programs.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'blog_articles', THEME_URI . '/static/js/blog_articles/blog_articles.min.js', ['jquery'], THEME_VERSION, true ); Не удаляй 2 строки, для примера будут.
 ?>
 
 <main class="main">
+	<section class="dual-full-img">
+		<div class="full-img">
+			<picture>
+				<source srcset="<?php echo THEME_URI; ?>/static/img/dual361/fw-mob.jpg" media="(max-width: 768px)">
+				<source srcset="<?php echo THEME_URI; ?>/static/img/dual361/fw.jpg" media="(min-width: 769px)">
+				<img src="<?php echo THEME_URI; ?>/static/img/dual361/fw.jpg" alt="Background Image">
+			</picture>
+		</div>
+	</section>
 	<section class="dual-cases empower"> <!-- Дефолтный красный для стрелок, емпавер класс - синие стрелки -->
 		<div class="container">
 			<div class="dual-cases-wrapper">

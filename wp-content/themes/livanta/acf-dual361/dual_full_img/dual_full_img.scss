@@ -1,0 +1,20 @@
+@import '../../src/scss/helpers/mixins';
+
+.dual-full-img {
+	position: relative;
+
+	.full-img {
+		width: 100vw;
+		height: 431px;
+
+		@media(min-width: $lg) {
+			height: 500px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
