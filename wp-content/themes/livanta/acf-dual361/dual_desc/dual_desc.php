@@ -32,7 +32,9 @@ $image = get_sub_field( 'image' );
 					echo '<div class="dual-desc-links">';
 
 					foreach( $links as $link )
-						get_template_part( 'components/dual361/links/link', 'arrow', liv_get_acf_link_data( $link['link'] ) );
+						get_template_part( 'components/dual361/links/link', 'arrow', array_merge( liv_get_acf_link_data( $link['link'] ), [
+							'type' => $type
+						] ) );
 
 					echo '</div>';
 				}
