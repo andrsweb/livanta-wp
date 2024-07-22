@@ -5,11 +5,7 @@
 
 	.full-img {
 		width: 100vw;
-		height: 431px;
-
-		@media(min-width: $lg) {
-			height: 500px;
-		}
+		height: auto;
 
 		img {
 			width: 100%;
