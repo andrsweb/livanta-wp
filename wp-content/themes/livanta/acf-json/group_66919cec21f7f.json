@@ -649,7 +649,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -669,7 +669,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -683,6 +683,22 @@
                             "max_size": "",
                             "mime_types": "",
                             "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_669ec3e4f1e5e",
+                            "label": "Image Link",
+                            "name": "image_link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
                         },
                         {
                             "key": "field_669ac40d5610f",
@@ -2480,5 +2496,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721679557
+    "modified": 1721680901
 }
