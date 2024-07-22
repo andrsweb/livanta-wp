@@ -10,6 +10,7 @@
  */
 
 $logo      = get_field( 'logo_footer_dual', 'option' );
+$logo_link = get_field( 'logo_footer_dual_link', 'option' );
 $red_link  = get_field( 'red_link', 'option' );
 $blue_link = get_field( 'blue_link', 'option' );
 $copyright = get_field( 'copyright_dual', 'option' );
@@ -21,9 +22,10 @@ $copyright = get_field( 'copyright_dual', 'option' );
 			<div class="footer-dual-row">
 				<?php
 				if( $logo ){
+					$logo_url = $logo_link ? $logo_link['url'] : get_bloginfo( 'url' );
 					?>
 					<div class="footer-dual-col">
-						<a href="<?php home_url( '/' ) ?>" class="footer-dual-logo">
+						<a href="<?php echo esc_url( $logo_url ) ?>" class="footer-dual-logo">
 							<?php echo wp_get_attachment_image( $logo, 'full' ) ?>
 						</a>
 					</div>

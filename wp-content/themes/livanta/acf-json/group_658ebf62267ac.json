@@ -221,7 +221,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -235,6 +235,22 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_669ec18034883",
+            "label": "Logo Link",
+            "name": "logo_footer_dual_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_669add91378bb",
@@ -307,5 +323,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721425348
+    "modified": 1721680280
 }

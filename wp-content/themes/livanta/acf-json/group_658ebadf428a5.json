@@ -89,7 +89,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "34",
                 "class": "",
                 "id": ""
             },
@@ -105,6 +105,22 @@
             "preview_size": "thumbnail"
         },
         {
+            "key": "field_669ec13e02997",
+            "label": "Logo Link",
+            "name": "logo_dual_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_66997ef99305e",
             "label": "Button",
             "name": "header_button_dual",
@@ -114,7 +130,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -139,5 +155,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721335563
+    "modified": 1721680226
 }

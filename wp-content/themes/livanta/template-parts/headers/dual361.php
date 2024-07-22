@@ -13,6 +13,7 @@ global $page, $paged;
 
 $site_desc     = get_bloginfo( 'description', 'display' );
 $logo          = get_field( 'logo_dual', 'option' );
+$logo_link     = get_field( 'logo_dual_link', 'option' );
 $header_button = get_field( 'header_button_dual', 'option' );
 ?>
 
@@ -56,8 +57,9 @@ $header_button = get_field( 'header_button_dual', 'option' );
 		<div class="header-dual-wrapper">
 			<?php
 			if( $logo ){
+				$logo_url = $logo_link ? $logo_link['url'] : get_bloginfo( 'url' );
 				?>
-				<a href="<?php bloginfo( 'url' ) ?>" class="header-dual-logo">
+				<a href="<?php echo esc_url( $logo_url ) ?>" class="header-dual-logo">
 					<?php echo wp_get_attachment_image( $logo, 'full' ) ?>
 				</a>
 				<?php
