@@ -250,14 +250,11 @@
 					width: calc(100% - 34px);
 					display: flex;
 					flex-direction: column;
+					@include text-gap;
 
 					@media(min-width: $lg) {
 						width: calc(100% - 64px);	
 					}
-
-					@include text-gap;
-
-					
 
 					p {
 						font-family: $ff;

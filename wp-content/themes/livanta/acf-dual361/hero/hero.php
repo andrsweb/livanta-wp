@@ -37,16 +37,13 @@ $button_type = get_sub_field( 'button_type' ) ?: 'blue';
 					</div>
 					<?php
 				}
-				?>
 
-				<!-- <div class="breadcrumbs">
-					<div class="breadcrumb current">
-						Home
-					</div>
-					<div class="breadcrumb">
-						Together
-					</div>
-				</div> -->
+				if( function_exists( 'bcn_display' ) ){
+					echo '<div class="breadcrumbs">';
+					bcn_display( $return = false, $linked = true, $reverse = false, $force = false );
+					echo '</div>';
+				}
+				?>
 
 				<?php
 				if( $title ) echo '<h1>', $title, '</h1>';

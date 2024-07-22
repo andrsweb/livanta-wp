@@ -90,6 +90,7 @@
 			width: 100%;
 			color: $N900;
 			gap: 6px;
+			@include p1-bold();
 
 			&::before {
 				content: '';
@@ -118,8 +119,6 @@
 				width: calc(100% - 36px);
 				gap: 8px;
 			}
-
-			@include p1-bold();
 		}
 	}
 }

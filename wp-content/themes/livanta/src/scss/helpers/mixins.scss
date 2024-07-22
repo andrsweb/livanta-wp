@@ -74,9 +74,7 @@
 }
 
 @mixin text-gap() {
-	& {
-		gap: 20px
-	}
+	gap: 20px;
 
 	@media(min-width: $lg) {
 		gap: 24px;

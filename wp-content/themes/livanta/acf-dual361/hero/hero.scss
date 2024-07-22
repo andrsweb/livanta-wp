@@ -158,28 +158,21 @@
 	gap: 8px;
 	margin-bottom: 8px;
 	
-	.breadcrumb {
+	> span a,
+	> i {
+		@include p3-bold;
+
+		& {
+			color: $N900
+		}
+	}
+
+	> span:last-child,
+	> i:last-of-type {
 		@include p3-bold;
 
 		& {
 			color: $N400
-		}
-
-		&::after {
-			content: '/';
-			margin-left: 8px;
-			color: $N400;
-		}
-
-		&:last-child {
-			&::after {
-				display: none;
-			}
-		}
-
-		&.current {
-			color: $N900;
-			pointer-events: none;
 		}
 	}
 }
