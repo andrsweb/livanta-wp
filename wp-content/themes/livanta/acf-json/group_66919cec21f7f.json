@@ -1994,6 +1994,138 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_669ebe31559c4",
+                            "label": "Left Column Links",
+                            "name": "left_column_links",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_669ebe4f559c5",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "",
+                                    "parent_repeater": "field_669ebe31559c4"
+                                },
+                                {
+                                    "key": "field_669ebe60559c6",
+                                    "label": "Type",
+                                    "name": "type",
+                                    "aria-label": "",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "red": "Red",
+                                        "blue": "Blue"
+                                    },
+                                    "default_value": "red",
+                                    "return_format": "",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "",
+                                    "save_other_choice": 0,
+                                    "parent_repeater": "field_669ebe31559c4"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_669ebe7e559c7",
+                            "label": "Right Column Links",
+                            "name": "right_column_links",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_669ebe7e559c8",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_669ebe7e559c7"
+                                },
+                                {
+                                    "key": "field_669ebe7e559c9",
+                                    "label": "Type",
+                                    "name": "type",
+                                    "aria-label": "",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "red": "Red",
+                                        "blue": "Blue"
+                                    },
+                                    "default_value": "red",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical",
+                                    "save_other_choice": 0,
+                                    "parent_repeater": "field_669ebe7e559c7"
+                                }
+                            ]
+                        },
+                        {
                             "key": "field_669d052f3b1bf",
                             "label": "Link",
                             "name": "link",
@@ -2348,5 +2480,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721678971
+    "modified": 1721679557
 }
