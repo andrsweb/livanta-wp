@@ -212,7 +212,6 @@
 							&:first-child {
 								a {
 									color: $R500;
-									pointer-events: none;
 									@include p2-bold();
 								}
 							}				
