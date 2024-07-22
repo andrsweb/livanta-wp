@@ -8,9 +8,9 @@
 	}
 
 	&.blue {
-		.dual-cases-item-img {
-			svg path {
-				fill: $B500;
+		.dual-cases-item-title {
+			&::before {
+				background-image: url('../../../static/img/dual361/arr-blue.svg');
 			}
 		}
 	}
@@ -84,29 +84,34 @@
 			}
 		}
 
-		&-img {
-			width: 26px;
-			height: 26px;
-
-			@media(min-width: $lg) {
-				width: 28px;
-				height: 28px;
-			}
-
-			img {
-				width: 100%;
-				height: 100%;
-			}
-		}
-
 		&-title {
+			display: flex;
+			align-items: flex-start;
 			width: calc(100% - 32px);
 			color: $N900;
-			@include p1-bold();
+			gap: 6px;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 26px;
+				height: 26px;
+				background-image: url('../../../static/img/dual361/arr-red.svg');
+				background-size: 100%;
+				background-repeat: no-repeat;
+
+				@media(min-width: $lg) {
+					width: 28px;
+					height: 28px;
+				}
+			}
 
 			@media(min-width: $lg) {
 				width: calc(100% - 36px);
+				gap: 8px;
 			}
+
+			@include p1-bold();
 		}
 	}
 }
