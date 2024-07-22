@@ -102,13 +102,13 @@
 
 				@media(min-width: $xl) {
 					position: static;
+					max-height: 700px;
 				}
 			}
 
 			@media(min-width: $xl) {
 				width: 60%;
 				margin-left: 0;
-				max-height: 700px;
 			}
 		}
 
