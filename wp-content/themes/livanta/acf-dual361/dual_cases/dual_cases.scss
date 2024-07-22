@@ -87,7 +87,7 @@
 		&-title {
 			display: flex;
 			align-items: flex-start;
-			width: calc(100% - 32px);
+			width: 100%;
 			color: $N900;
 			gap: 6px;
 
@@ -103,6 +103,14 @@
 				@media(min-width: $lg) {
 					width: 28px;
 					height: 28px;
+				}
+			}
+
+			span {
+				width: calc(100% - 32px);
+
+				@media(min-width: $lg) {
+					width: calc(100% - 36px);
 				}
 			}
 

@@ -33,7 +33,7 @@ $items = get_sub_field( 'items' );
 
 					echo '<div class="dual-cases-item">';
 
-					if( $item_title ) echo '<div class="dual-cases-item-top"><div class="dual-cases-item-title">', $item_title, '</div></div>';
+					if( $item_title ) echo '<div class="dual-cases-item-top"><div class="dual-cases-item-title"><span>', $item_title, '</span></div></div>';
 
 					if( $item_text ) echo '<div class="dual-cases-item-bottom">', $item_text, '</div>';
 

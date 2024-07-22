@@ -2,7 +2,7 @@
 
 .cta {
 	padding: 60px 0;
-	background-color: $R800;
+	background-color: $N700;
 	overflow: hidden;
 
 	@media(min-width: $lg) {
@@ -14,7 +14,7 @@
 	}
 
 	&.blue {
-		background-color: $N700;
+		background-color: $N800;
 	}
 
 	&-wrapper {
