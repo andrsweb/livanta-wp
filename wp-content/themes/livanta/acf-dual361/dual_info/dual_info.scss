@@ -70,15 +70,15 @@
 
 		img {
 			width: auto;
-			height: 28px;
+			height: 44px;
 
 			@media(min-width: $lg) {
-				height: 40px;
+				height: 72px;
 			}
 		}
 
 		@media(min-width: $lg) {
-			margin-bottom: 48px;
+			margin-bottom: 32px;
 		}
 
 		&-wrapper {
