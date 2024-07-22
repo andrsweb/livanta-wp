@@ -11,6 +11,7 @@
 
 if( ! $block = $args['block'] ?? null ) return;
 
+$color = $args['color'] ?? 'red';
 $type  = $block['type'] ?? 'default';
 $image = $block['image'] ?? null;
 $title = $block['title'] ?? '';
@@ -30,7 +31,9 @@ $links = $block['links'] ?? null;
 				echo '<div class="dual-image-text-links">';
 
 				foreach( $links as $link )
-					get_template_part( 'components/dual361/links/link', 'arrow', liv_get_acf_link_data( $link['link'] ) );
+					get_template_part( 'components/dual361/links/link', 'arrow', array_merge( liv_get_acf_link_data( $link['link'] ), [
+						'type' => $color
+					] ) );
 
 				echo '</div>';
 			}

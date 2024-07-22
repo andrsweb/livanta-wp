@@ -21,7 +21,10 @@ $type = get_sub_field( 'type' ) ?: 'red';
 		<div class="dual-image-text-items">
 			<?php
 			foreach( $blocks as $block )
-				get_template_part( 'acf-dual361/dual_image_text/block', null, ['block' => $block] );
+				get_template_part( 'acf-dual361/dual_image_text/block', null, [
+					'block' => $block,
+					'color' => $type
+				] );
 			?>
 		</div>
 	</div>
