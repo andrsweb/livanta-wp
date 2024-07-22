@@ -102,7 +102,6 @@
 
 				@media(min-width: $xl) {
 					position: static;
-					max-height: 700px;
 				}
 			}
 
@@ -145,6 +144,7 @@
 			position: absolute;
 			left: 0;
 			top: 0;
+			max-height: 700px;
 
 			@media(min-width: $xl) {
 				position: static;
