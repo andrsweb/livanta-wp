@@ -8,7 +8,7 @@
  */
 
 const THEME_NAME = 'livanta';
-const THEME_VERSION = '1.0.0';
+const THEME_VERSION = '1.0.3';
 define( 'THEME_URI', get_template_directory_uri() );
 define( 'THEME_DIR', get_template_directory() );
 
@@ -131,4 +131,3 @@ function liv_acf_init(): void
 		] );
 	}
 }
-

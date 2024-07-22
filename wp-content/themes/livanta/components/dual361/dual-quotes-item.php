@@ -26,7 +26,7 @@ $position = $item['position'] ?? '';
 	?>
 
 	<div class="dual-quotes-info">
-		<img src="<?php echo THEME_URI ?> /static/img/dual361/quote-ico.svg" alt="">
+		<img src="<?php echo THEME_URI ?>/static/img/dual361/quote-ico.svg" alt="">
 
 		<?php
 		if( $text ) echo '<p>', $text, '</p>';
