@@ -12,17 +12,18 @@
 wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'hero', THEME_URI . '/static/js/hero/hero.min.js', ['jquery'], THEME_VERSION, true );
 
-$type        = get_sub_field( 'type' );
-$bg_img      = get_sub_field( 'bg_img' ) ?: null;
-$bg_color    = get_sub_field( 'bg_color' ) ?: '';
-$style       = $type === 'color' && $bg_color ? ' style="background-color:' . $bg_color . '"' : '';
-$img         = get_sub_field( 'img' ) ?: null;
-$img_mobile  = get_sub_field( 'img_mobile' ) ?: $img;
-$title       = get_sub_field( 'title' );
-$text        = get_sub_field( 'text' );
-$button      = get_sub_field( 'button' );
-$button_desc = get_sub_field( 'button_desc' );
-$button_type = get_sub_field( 'button_type' ) ?: 'blue';
+$type             = get_sub_field( 'type' );
+$hide_breadcrumbs = get_sub_field( 'hide_breadcrumbs' );
+$bg_img           = get_sub_field( 'bg_img' ) ?: null;
+$bg_color         = get_sub_field( 'bg_color' ) ?: '';
+$style            = $type === 'color' && $bg_color ? ' style="background-color:' . $bg_color . '"' : '';
+$img              = get_sub_field( 'img' ) ?: null;
+$img_mobile       = get_sub_field( 'img_mobile' ) ?: $img;
+$title            = get_sub_field( 'title' );
+$text             = get_sub_field( 'text' );
+$button           = get_sub_field( 'button' );
+$button_desc      = get_sub_field( 'button_desc' );
+$button_type      = get_sub_field( 'button_type' ) ?: 'blue';
 ?>
 
 <section class="hero-dual <?php echo esc_attr( $type ) ?>"<?php echo $style ?>>
@@ -38,7 +39,7 @@ $button_type = get_sub_field( 'button_type' ) ?: 'blue';
 					<?php
 				}
 
-				if( function_exists( 'bcn_display' ) ){
+				if( function_exists( 'bcn_display' ) && ! $hide_breadcrumbs ){
 					echo '<div class="breadcrumbs">';
 					bcn_display( $return = false, $linked = true, $reverse = false, $force = false );
 					echo '</div>';
