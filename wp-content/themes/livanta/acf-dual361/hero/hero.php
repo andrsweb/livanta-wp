@@ -17,6 +17,7 @@ $bg_img      = get_sub_field( 'bg_img' ) ?: null;
 $bg_color    = get_sub_field( 'bg_color' ) ?: '';
 $style       = $type === 'color' && $bg_color ? ' style="background-color:' . $bg_color . '"' : '';
 $img         = get_sub_field( 'img' ) ?: null;
+$img_mobile  = get_sub_field( 'img_mobile' ) ?: $img;
 $title       = get_sub_field( 'title' );
 $text        = get_sub_field( 'text' );
 $button      = get_sub_field( 'button' );
@@ -53,7 +54,8 @@ $button_type = get_sub_field( 'button_type' ) ?: 'blue';
 				if( $text ) echo '<div class="hero-dual-text">', $text, '</div>';
 
 				if( $button ){
-					get_template_part( 'components/dual361/links/link', 'big', array_merge( liv_get_acf_link_data( $button ), [
+					$link_look = ( $type === 'member' || $type === 'empower' ) ? 'arrow' : 'big';
+					get_template_part( 'components/dual361/links/link', $link_look, array_merge( liv_get_acf_link_data( $button ), [
 						'desc'        => $button_desc,
 						'type'        => $button_type
 					] ) );
@@ -63,11 +65,15 @@ $button_type = get_sub_field( 'button_type' ) ?: 'blue';
 
 			<?php
 			if( $img ){
-				?>
-				<div class="hero-dual-img">
-					<?php echo wp_get_attachment_image( $img, 'large', false, ['class' => 'hero-dual-bg'] ) ?>
-				</div>
-				<?php
+				echo '<div class="hero-dual-img">';
+				get_template_part( 'components/image', null, [
+					'data' => crit_prepare_image_data( $img, 'full', [
+						'class'       => 'hero-dual-bg',
+						'mobile'      => $img_mobile,
+						'mobile_size' => 'large'
+					] )
+				] );
+				echo '</div>';
 			}
 			?>
 		</div><!-- .hero-dual-wrapper -->
