@@ -11,42 +11,39 @@
 
 get_header();
 
+wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
+
 $title_404	= get_field( 'title_404', 'option' );
-$desc_404	= get_field( 'desc_404', 'option' );
+$text_404	= get_field( 'desc_404', 'option' );
 $img_404	= get_field( 'img_404', 'option' );
-$img_404	= $img_404
-			? ' style="background-image: url(' . esc_url( wp_get_attachment_image_url( $img_404['id'], 'medium' ) ) . ')'
-			: '';
 ?>
 
 <main class="main">
-	<div class="hero hero-404">
+	<section class="hero-dual member">
 		<div class="container">
-			<div class="hero-inner"<?php echo $img_404 ?>>
-				<div class="hero-body">
+			<div class="hero-dual-wrapper">
+				<div class="hero-dual-info">
 					<?php
-					if( $title_404 ){
-						?>
-						<h1 class="hero-title">
-							<?php printf( esc_html__( '%s', 'livanta' ), $title_404 ) ?>
-						</h1>
-						<?php
-					}
+					if( $title_404 ) echo '<h1>', $title_404, '</h1>';
+
+					if( $text_404 ) echo '<div class="hero-dual-text">', $text_404, '</div>';
 					?>
 				</div>
+
+				<?php
+				if( $img_404 ){
+					echo '<div class="hero-dual-img">';
+					get_template_part( 'components/image', null, [
+						'data' => crit_prepare_image_data( $img_404, 'full', [
+							'class' => 'hero-dual-bg'
+						] )
+					] );
+					echo '</div>';
+				}
+				?>
 			</div>
 		</div>
-	</div><!-- .hero.hero-404 -->
-
-	<div class="page-content page-content-404">
-		<div class="container">
-			<?php
-			if( $desc_404 ){
-				printf( __( '%s', 'livanta' ), $desc_404 );
-			}
-			?>
-		</div>
-	</div>
+	</section>
 </main>
 
 <?php

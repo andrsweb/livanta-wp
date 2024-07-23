@@ -10,7 +10,6 @@
  */
 
 wp_enqueue_style( 'hero', THEME_URI . '/static/css/hero/hero.min.css', [], THEME_VERSION );
-wp_enqueue_script( 'hero', THEME_URI . '/static/js/hero/hero.min.js', ['jquery'], THEME_VERSION, true );
 
 $type             = get_sub_field( 'type' );
 $hide_breadcrumbs = get_sub_field( 'hide_breadcrumbs' );
