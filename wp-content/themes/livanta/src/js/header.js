@@ -15,7 +15,7 @@ const toggleBurgerMenu = () => {
 	const header             = document.querySelector('.header')
 	setTargetElement(document.querySelector('#menu-lock'))
 
-	if(!headerInner && !burgerButton && !header ) return
+	if( !header || !headerInner || !burgerButton ) return
 
 	burgerButton.addEventListener('click', () => {
 		if(window.scrollY === 0) {

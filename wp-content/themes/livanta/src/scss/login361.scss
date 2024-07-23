@@ -1,0 +1,12 @@
+@import '../../src/scss/helpers/mixins';
+
+.login361 {
+	
+	&-wrapper {
+		width: 100vw;
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

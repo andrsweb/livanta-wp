@@ -72,6 +72,8 @@ const toggleBurgerMenu = () => {
     const headerBox = document.querySelector('.header-dual-box')
 	const menuLinks = document.querySelectorAll('.menu-item-has-children > a')
 
+	if(!burgerButton || !headerBox || !menuLinks.length) return
+
     burgerButton.addEventListener('click', () => {
 		setTargetElement(document.querySelector('#header-box'))
 		if(!headerBox.classList.contains('showed')) {
