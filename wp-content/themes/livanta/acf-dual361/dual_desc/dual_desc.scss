@@ -8,14 +8,6 @@
 		padding-top: 120px;
 	}
 
-	&.blue {
-		.dual-desc-text {
-			p, ul {
-				color: $N900;
-			}
-		}
-	}
-
 	&-wrapper {
 		display: flex;
 		flex-direction: column;

@@ -119,6 +119,14 @@
 		.link-big {
 			margin-top: 24px;
 		}
+
+		.link-arrow {
+			margin-top: 32px;
+
+			@media(min-width: $lg) {
+				margin-top: 63px;
+			}
+		}
 	}
 
 	&-img {

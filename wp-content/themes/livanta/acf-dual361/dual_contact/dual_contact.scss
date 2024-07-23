@@ -187,13 +187,13 @@
 		&::before {
 			width: 46px;
 			height: 24px;
-			background-image: url('http://livanta.test/wp-content/uploads/2024/07/orbit.svg');
+			background-image: url('../../../static/img/dual361/orbit.svg');
 		}
 
 		&::after {
 			width: 24px;
 			height: 24px;
-			background-image: url('http://livanta.test/wp-content/uploads/2024/07/arrow-forward.svg');
+			background-image: url('../../../static/img/dual361/arrow-forward.svg');
 		}
 	}
 }
