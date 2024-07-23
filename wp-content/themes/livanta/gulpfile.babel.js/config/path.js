@@ -12,7 +12,7 @@ export default {
 	php			: { src: '**/*.php' },
 
 	scss		: {
-		src		: pathSrc + '/scss/main.scss',
+		src		: pathSrc + '/scss/*.scss',
 		watch	: pathSrc + '/scss/**/*.scss',
 		dest	: pathDest + '/css'
 	},
