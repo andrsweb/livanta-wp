@@ -7,10 +7,6 @@
 		padding: 100px 0;
 	}
 
-	.container {
-
-	}
-
 	&-logo {
 		margin-bottom: 24px;
 
@@ -53,6 +49,7 @@
 
 		&.active {
 			color: $B500;
+			pointer-events: none;
 
 			&::after {
 				content: '';
@@ -257,5 +254,34 @@
 				background-color: $B700;
 			}
 		}
+	}
+}
+.page-template-login-member361 {
+	.login361 {
+		&-wrapper {
+			.login361-link.active {
+				color: $R500;
+
+				&::after {
+					background-color: $R500;
+				}
+			}
+
+			.submit {
+				background-color: $R500;
+
+				&:hover {
+					background-color: $R600;
+				}
+	
+				&:active {
+					background-color: $R700;
+				}
+			}
+
+			.create {
+				color: $R500;
+			}
+		} 
 	}
 }
