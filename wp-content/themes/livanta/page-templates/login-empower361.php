@@ -95,4 +95,3 @@ $tabs      = get_field( 'tabs' );
 
 <?php
 get_footer();
-
