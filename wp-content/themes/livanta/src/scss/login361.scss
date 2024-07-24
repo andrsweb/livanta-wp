@@ -39,7 +39,7 @@
 		font-family: $ff-title;
 		font-size: 28px;
 		font-style: normal;
-		font-weight: $fw-medium;
+		font-weight: $fw-semibold;
 		line-height: 120%;
 		position: relative;
 
@@ -214,11 +214,11 @@
 			font-weight: $fw-medium;
 			line-height: 160%;
 			text-decoration-line: underline;
-			margin: 8px 0 20px 0;
+			margin: 8px auto 20px 0;
 
 			@media(min-width: $lg) {
 				font-size: 16px;
-				margin: 12px 0 24px 0;
+				margin: 12px auto 24px 0;
 			}
 
 			&:hover {
