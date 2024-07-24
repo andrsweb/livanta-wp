@@ -54,6 +54,21 @@ $header_button = get_field( 'header_button_dual', 'option' );
 
 <div class="wrapper">
 	<header class="header-dual">
+		<div class="header-dual-back">
+			<a href="/">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="mask0_1185_1995ddd" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+						<rect x="20" y="20" width="20" height="20" transform="rotate(-180 20 20)" fill="#D9D9D9"/>
+					</mask>
+					<g mask="url(#mask0_1185_1995ddd)">
+						<path d="M6.14423 9.37504L16.25 9.37504L16.25 10.625L6.14423 10.625L10.891 15.3718L10 16.25L3.75004 10L10 3.75004L10.891 4.62823L6.14423 9.37504Z" fill="white"/>
+					</g>
+				</svg>
+				<span>
+					Back to Livanta
+				</span>
+			</a>
+		</div>
 		<div class="header-dual-wrapper">
 			<?php
 			if( $logo ){

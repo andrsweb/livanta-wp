@@ -23,6 +23,29 @@
 		}
 	}
 
+	&-back {
+		display: flex;
+		background-color: $B800;
+		padding: 0 20px;
+
+		@media(min-width: $lg) {
+			padding: 0 32px;
+		}
+
+		a {
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
+			color: $white;
+			@include p3-bold();
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
 	&-wrapper {
 		display: flex;
 		align-items: center;
@@ -77,9 +100,9 @@
 		display: none;
 		position: fixed;
 		left: 0;
-		top: 48px;
+		top: 68px;
 		width: 100%;
-		height: calc(100dvh - 48px);
+		height: calc(100dvh - 68px);
 		background-color: $white;
 
 		@media(min-width: $lg) {
@@ -100,8 +123,12 @@
 
 			@media(min-width: $lg) {
 				flex-direction: row;
-				gap: 50px;
+				gap: 35px;
 				padding: 0;
+			}
+
+			@media(min-width: $xl) {
+				gap: 50px;
 			}
 
 			&-item {
