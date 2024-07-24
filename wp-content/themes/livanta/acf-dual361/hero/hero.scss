@@ -171,24 +171,8 @@
 	}
 	
 	&>span {
-		&::after {
-			content: '/';
-			margin-left: 4px;
-			@include p3-bold();
-
-			@media(min-width: $lg) {
-				margin-left: 8px;
-			}
-		}
-
 		&:first-child {
 			display: none
-		}
-
-		&:last-child {
-			&::after {
-				display: none
-			}
 		}
 	}
 
