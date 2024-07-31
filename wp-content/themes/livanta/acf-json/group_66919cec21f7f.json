@@ -597,7 +597,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -617,7 +617,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -628,6 +628,31 @@
                             "step": 1,
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_66aa9505bce94",
+                            "label": "Category",
+                            "name": "category",
+                            "aria-label": "",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "field_type": "select",
+                            "allow_null": 1,
+                            "bidirectional": 0,
+                            "multiple": 0,
+                            "bidirectional_target": []
                         }
                     ],
                     "min": "",
@@ -2496,5 +2521,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721680901
+    "modified": 1722455330
 }
