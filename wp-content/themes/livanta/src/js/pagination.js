@@ -1,9 +1,9 @@
 import { paginate } from './common/global'
 
 document.addEventListener( 'DOMContentLoaded', () => {
-    'use strict'
+	'use strict'
 
-    blogPagination()
+	blogPagination()
 } )
 
 const blogPagination = () => {
@@ -19,7 +19,7 @@ const blogPagination = () => {
 
 	document.addEventListener( 'click', e => {
 		const
-			target		= e.target,
+			target      = e.target,
 			currentPage = parseInt( document.querySelector( '.page-numbers.current' ).innerHTML ) || 1
 
 		if( target.tagName !== 'A' || ! target.className || ! target.classList.contains( 'page-numbers' ) ) return
@@ -31,5 +31,9 @@ const blogPagination = () => {
 		else newPage = parseInt( target.innerHTML )
 
 		paginate( newPage, wrap, document.querySelector( '.news-filters .news-cards' ) )
+
+		if( document.querySelector( '.blog-dual-cards' ) ){
+			paginate( newPage, wrap, document.querySelector( '.blog-dual-cards' ) )
+		}
 	} )
 }
