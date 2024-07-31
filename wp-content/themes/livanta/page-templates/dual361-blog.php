@@ -9,6 +9,8 @@
 
 get_header();
 
+wp_enqueue_style( 'articles', THEME_URI . '../static/css/articles.min.css', [], THEME_VERSION );
+
 $term_id  = get_field( 'category' );
 $per_page = 9;
 $posts    = new WP_Query( [
