@@ -196,6 +196,8 @@
 	}
 	
 	&>span {
+		display: flex;
+
 		&::after {
 			content: '/';
 			margin-left: 4px;
