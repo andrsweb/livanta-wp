@@ -9,6 +9,8 @@
  */
 
 get_header();
+
+wp_enqueue_style( 'dual361-single', THEME_URI . '../static/css/dual361-single.min.css', [], THEME_VERSION );
 ?>
 
 	<main class="main">

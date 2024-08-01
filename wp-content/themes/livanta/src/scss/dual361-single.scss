@@ -1,0 +1,174 @@
+@import '../../src/scss/helpers/mixins';
+
+.post-single-dual {
+
+	.post-single-dual-wrapper {
+		max-width: 900px;
+	}
+
+	&-hero {
+		padding: 60px 0 12px;
+
+		@media(min-width: $xl) {
+			padding: 102px 0 16px;
+		}
+
+		.breadcrumbs {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 4px;
+			margin-bottom: 8px;
+		
+			@media(min-width: $lg) {
+				gap: 8px;
+			}
+			
+			&>span {
+				display: flex;
+		
+				&::after {
+					content: '/';
+					margin-left: 4px;
+					@include p3-bold();
+		
+					@media(min-width: $lg) {
+						margin-left: 8px;
+					}
+				}
+		
+				&:first-child {
+					display: none
+				}
+		
+				&:last-child {
+					&::after {
+						display: none
+					}
+				}
+			}
+		
+			> span a {
+				@include p3-bold;
+		
+				& {
+					color: $N900
+				}
+			}
+		
+			> span:last-child,
+			> i:last-of-type {
+				@include p3-bold;
+		
+				& {
+					color: $N400
+				}
+			}
+		}
+	
+		h1 {
+			color: $B500;
+		}
+	
+		.post-single-dual-info {
+			display: flex;
+			gap: 16px;
+			margin-bottom: 24px;
+			flex-direction: column;
+			align-items: flex-start;
+
+			span {
+				display: none;
+			}
+
+			@media(min-width: $sm) {
+				flex-direction: row;
+				align-items: center;
+				gap: 23px;
+				margin-bottom: 33px;
+
+				span {
+					display: inline-block;
+				}
+			}
+		}
+	
+		.publish {
+			display: flex;
+			
+			gap: 5px;
+			color: $N900;
+			@include p2-reg();
+		}
+	
+		.share {
+			display: flex;
+			align-items: center;
+	
+			&__title {
+				color: $N900;
+				@include p2-reg();
+			}
+	
+			&__links {
+				display: flex;
+				align-items: center;
+				margin-left: 12px;
+	
+				a {
+					display: flex;
+				}
+			}
+	
+			.addtoany_shortcode {
+				display: flex;
+	
+				.addtoany_list {
+					display: flex;
+				}
+			}
+		}
+	
+		.post-single-dual-thumb {
+			width: 100%;
+	
+			img {
+				width: 100%;
+			}
+		}
+	}
+	
+	&-content {
+		padding: 12px 0 60px;
+
+		@media(min-width: $xl) {
+			padding: 16px 0 120px;
+		}
+	}
+
+	&-text {
+		display: flex;
+		flex-direction: column;
+		@include text-gap();
+
+		h3 {
+			color: $N900;
+			@include p1-bold();
+		}
+		
+		p {
+			color: $N900;
+			@include p2-reg();
+		}
+
+		a {
+			color: $B500;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+}
