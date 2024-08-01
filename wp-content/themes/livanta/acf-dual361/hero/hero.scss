@@ -43,7 +43,10 @@
 			> span {
 				a {
 					@include p3-bold;
-					color: $white
+
+					& {
+						color: $white
+					}
 				}
 
 				&::after {
@@ -53,7 +56,10 @@
 			
 			> span:last-child {
 				@include p3-bold;
-				color: $N300;
+
+				& {
+					color: $N300
+				}
 
 				&::after {
 					color: $N300;

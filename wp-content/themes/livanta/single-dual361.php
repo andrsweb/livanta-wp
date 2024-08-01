@@ -8,7 +8,7 @@
  * @subpackage livanta
  */
 
-get_header();
+get_template_part( 'template-parts/headers/dual361' );
 
 wp_enqueue_style( 'dual361-single', THEME_URI . '../static/css/dual361-single.min.css', [], THEME_VERSION );
 ?>
@@ -23,4 +23,4 @@ wp_enqueue_style( 'dual361-single', THEME_URI . '../static/css/dual361-single.mi
 	</main>
 
 <?php
-get_footer();
+get_template_part( 'template-parts/footers/dual361' );
