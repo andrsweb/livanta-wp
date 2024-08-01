@@ -11,7 +11,7 @@ get_header();
 
 wp_enqueue_style( 'articles', THEME_URI . '/static/css/articles.min.css', [], THEME_VERSION );
 
-$per_page = 1;
+$per_page = 9;
 $posts    = new WP_Query( [
 	'post_type'      => 'dual361-article',
 	'posts_per_page' => $per_page,

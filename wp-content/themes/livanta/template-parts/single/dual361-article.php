@@ -27,7 +27,6 @@ $title     = get_the_title( $post_id );
 					<div class="breadcrumbs">
 						<span>
 							<a href="<?php echo get_the_permalink( $home_page ) ?>"><?php _e( 'Home', 'livanta' ) ?></a>
-						</span> / <span>
 							<span><?php echo esc_html( $title ) ?></span>
 						</span>
 					</div>
@@ -65,7 +64,6 @@ $title     = get_the_title( $post_id );
 				}
 				?>
 			</div>
-
 		</div>
 	</section>
 

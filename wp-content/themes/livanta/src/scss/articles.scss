@@ -36,6 +36,10 @@
 				width: calc(100% / 3 - 16px);
 			}
 
+			&__separator {
+				display: none;
+			}
+
 			&__img {
 				padding: 0;
 				height: 300px;

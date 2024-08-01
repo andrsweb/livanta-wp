@@ -20,7 +20,7 @@ $permalink = get_the_permalink( $post_id );
 		?>
 
 		<div class="card__info">
-			<span class="card__type"><?php echo liv_get_categories_names( $post_id ) ?> </span>| <span class="card__date">
+			<span class="card__type"><?php echo liv_get_categories_names( $post_id ) ?> </span><span class="card__separator">|</span><span class="card__date">
 				<?php echo get_the_date( 'd F, Y', $post_id ) ?>
 			</span>
 		</div>
