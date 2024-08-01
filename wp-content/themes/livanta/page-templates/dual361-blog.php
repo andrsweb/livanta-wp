@@ -9,7 +9,7 @@
 
 get_header();
 
-wp_enqueue_style( 'articles', THEME_URI . '../static/css/articles.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'articles', THEME_URI . '/static/css/articles.min.css', [], THEME_VERSION );
 
 $per_page = 1;
 $posts    = new WP_Query( [
