@@ -8,6 +8,7 @@
  */
 
 get_template_part( 'template-parts/headers/dual361' );
+wp_enqueue_style( 'dual_article', THEME_URI . '/static/css/dual361-single.min.css', [], THEME_VERSION );
 ?>
 
 	<main class="main">
