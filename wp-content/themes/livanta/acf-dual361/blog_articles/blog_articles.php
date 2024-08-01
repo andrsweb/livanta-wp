@@ -15,10 +15,11 @@ wp_enqueue_script( 'blog_articles', THEME_URI .
 
 $title    = get_sub_field( 'title' );
 $count    = get_sub_field( 'articles_count' ) ?: 10;
-$category = get_sub_field( 'category' ) ?: null;
-$args     = [ 'post_status' => 'publish', 'posts_per_page' => $count ];
-
-if( $category ) $args['category__in'] = $category;
+$args     = [
+	'post_type'      => 'dual361-article',
+	'post_status'    => 'publish',
+	'posts_per_page' => $count
+];
 
 $articles = get_posts( $args );
 ?>

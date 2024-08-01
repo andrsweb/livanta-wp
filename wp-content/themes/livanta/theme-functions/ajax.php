@@ -24,12 +24,13 @@ add_action( 'wp_ajax_nopriv_liv_ajax_pagination', 'liv_ajax_pagination' );
  */
 function liv_ajax_pagination(): void
 {
+	$post_type  = liv_clean( $_POST['post-type'] );
 	$page		= liv_clean( $_POST['page'] );
 	$term		= liv_clean( $_POST['term'] );
 	$per_page	= isset( $_POST['per-page'] ) ? liv_clean( $_POST['per-page'] ) : get_option( 'posts_per_page' );
 	$offset		= $per_page * $page - $per_page;
 	$args		= [
-		'post_type'			=> 'post',
+		'post_type'			=> $post_type,
 		'post_status'		=> 'publish',
 		'offset'			=> $offset,
 		'posts_per_page'	=> $per_page

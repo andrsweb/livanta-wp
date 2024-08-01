@@ -11,12 +11,11 @@ get_header();
 
 wp_enqueue_style( 'articles', THEME_URI . '../static/css/articles.min.css', [], THEME_VERSION );
 
-$term_id  = get_field( 'category' );
-$per_page = 9;
+$per_page = 1;
 $posts    = new WP_Query( [
+	'post_type'      => 'dual361-article',
 	'posts_per_page' => $per_page,
-	'post_status'    => 'publish',
-	'category__in'   => $term_id
+	'post_status'    => 'publish'
 ] );
 ?>
 
@@ -47,9 +46,9 @@ $posts    = new WP_Query( [
 				<?php
 				if ( $posts->have_posts() ) {
 					get_template_part( 'components/pagination', null, [
-						'term'     => $term_id,
-						'query'    => $posts,
-						'per_page' => $per_page
+						'query'     => $posts,
+						'post_type' => 'dual361-article',
+						'per_page'  => $per_page
 					] );
 				}
 				?>

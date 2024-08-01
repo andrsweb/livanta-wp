@@ -15,6 +15,7 @@ if ( ! $posts_query = $args['query'] ?? null ) {
 $query_max_num_pages = $args['max_pages'] ?? $posts_query->max_num_pages;
 $current_page        = $args['page'] ?? get_query_var( 'paged' );
 $current_page        = $current_page ?: 1;
+$post_type           = isset( $args['post_type'] ) ? ' data-type="' . esc_attr( $args['post_type'] ) . '"' : '';
 $term                = isset( $args['term'] ) ? ' data-term="' . esc_attr( $args['term'] ) . '"' : '';
 $per_page            = $args['per_page'] ?? get_option( 'posts_per_page' );
 $per_page            = ' data-per-page="' . $per_page . '"';
@@ -24,7 +25,7 @@ if ( ! $query_max_num_pages ) {
 }
 ?>
 
-<div class="pagination-wrapper"<?php echo $term, $per_page ?>>
+<div class="pagination-wrapper"<?php echo $post_type, $term, $per_page ?>>
 	<nav class="navigation pagination" role="navigation">
 		<?php
 		echo paginate_links( [

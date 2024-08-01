@@ -53,10 +53,12 @@ export const paginate = ( page, paginationWrap, postsWrap ) => {
 
 	const
 		formData	= new FormData(),
+		postType	= paginationWrap.dataset.type || 'post',
 		term		= paginationWrap.dataset.term || '',
 		perPage		= paginationWrap.dataset.perPage || ''
 
 	formData.append( 'action', 'liv_ajax_pagination' )
+	formData.append( 'post-type', postType )
 	formData.append( 'term', term )
 	formData.append( 'page', page || 1 )
 	formData.append( 'per-page', perPage )
