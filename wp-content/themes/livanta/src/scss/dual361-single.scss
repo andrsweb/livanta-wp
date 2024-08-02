@@ -162,6 +162,10 @@
 			@include p2-reg();
 		}
 
+		figure {
+			margin: 0;
+		}
+
 		ul {
 			li {
 				position: relative;
