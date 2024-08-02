@@ -12,9 +12,10 @@ if ( ! is_singular( 'dual361-article' ) ) {
 	return;
 }
 
-$post_id   = get_the_ID();
-$home_page = get_field( 'home_page', $post_id );
-$title     = get_the_title( $post_id );
+$post_id       = get_the_ID();
+$home_page     = get_field( 'home_page_dual', 'option' );
+$articles_page = get_field( 'articles_page_dual', 'option' );
+$title         = get_the_title( $post_id );
 ?>
 
 <article class="post-single-dual post-<?php echo esc_attr( $post_id ) ?>">
@@ -26,9 +27,24 @@ $title     = get_the_title( $post_id );
 					?>
 					<div class="breadcrumbs">
 						<span>
-							<a href="<?php echo get_the_permalink( $home_page ) ?>"><?php _e( 'Home', 'livanta' ) ?></a>
-							<span><?php echo esc_html( $title ) ?></span>
+							<a href="<?php echo get_the_permalink( $home_page ) ?>">
+								<?php _e( 'Home', 'livanta' ) ?>
+							</a>
 						</span>
+
+						<?php
+						if( $articles_page ) {
+							?>
+							<span>
+								<a href="<?php echo get_the_permalink( $articles_page ) ?>">
+									<?php _e( 'Articles', 'livanta' ) ?>
+								</a>
+							</span>
+							<?php
+						}
+						?>
+
+						<span><?php echo esc_html( $title ) ?></span>
 					</div>
 					<?php
 				}
